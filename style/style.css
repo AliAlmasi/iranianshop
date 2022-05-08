@@ -1,0 +1,19 @@
+.divTable{
+  display: table;
+  width: 1024px;
+  font-size: 13pt;
+  font-family: Tahoma, Verdana;
+  margin-left: auto;
+  margin-right: auto;
+  direction: rtl
+}
+
+.divTableRow{
+  display: table-row;
+}
+
+.divTableCell{
+  display: table-cell;
+  border: 1px solid #999;
+  padding: 3px 10px;
+}
