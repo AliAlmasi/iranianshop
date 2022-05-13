@@ -1,6 +1,7 @@
 <?php
     include ('./includes/header.php');
 ?>
+
 <br />
 <form method="post" action="action_register.php" name="register">
     <table border="0" style="width: 50%;margin-left: auto;margin-right: auto;">
