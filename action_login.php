@@ -23,9 +23,19 @@ $response = mysqli_query($link, $query);
 
 $result = mysqli_fetch_array($response);
 
-if($result){
+if($result) {
+    $_SESSION["state_login"] = true;
+    $_SESSION["realname"] = $result["$realname"];
+
+    if($result["type"] == "0")
+        $_SESSION["usertype"] = "nonadmin";
+
+    elseif($result["type"] == "1")
+        $_SESSION["usertype"] = "admin";
+
+
     echo("کاربر گرامی <b style='color:darkgreen;'>".$username."</b><br>
-    شما با موفقیت واردحساب کاربری خود شدید.");
+    شما با موفقیت واردحساب کاربری خود شدید."); // $result["$realname"]
 }
 else {
     echo("<span style='color:#ac0000'>اطلاعات وارد شده صحیح نمی‌باشد.</span>");
