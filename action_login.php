@@ -25,7 +25,7 @@ $result = mysqli_fetch_array($response);
 
 if($result) {
     $_SESSION["state_login"] = true;
-    $_SESSION["realname"] = $result["$realname"];
+    $_SESSION["realname"] = $result['$realname'];
 
     if($result["type"] == "0")
         $_SESSION["usertype"] = "nonadmin";
