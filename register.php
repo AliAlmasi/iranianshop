@@ -1,19 +1,19 @@
 <?php
-    include('./includes/header.php');
+include('./includes/header.php');
 
-    if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
-    ?> <script type="text/javascript">
-            location.replace("index.php")
-        </script><?php
-                }
-?>
+if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
+?> <script type="text/javascript">
+        location.replace("index.php")
+    </script><?php
+            }
+                ?>
 
 <br />
 <form method="post" action="action_register.php" name="register">
     <table border="0" style="width: 50%;margin-left: auto;margin-right: auto;">
         <tr>
             <td style="width: 40%;">نام واقعی <span style="color:#ac0000;">*</span></td>
-            <td style="width: 60%;"><input type="text" id="realname" name="realname" placeholder="علی الماسی" /></td>
+            <td style="width: 60%;"><input type="text" id="realname" name="realname" /></td>
         </tr>
         <tr>
             <td>نام کاربری <span style="color:#ac0000;">*</span></td>

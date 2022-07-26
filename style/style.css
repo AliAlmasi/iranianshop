@@ -1,4 +1,4 @@
-.divTable{
+.divTable {
   display: table;
   width: 1024px;
   font-size: 13pt;
@@ -8,17 +8,17 @@
   direction: rtl
 }
 
-.divTableRow{
+.divTableRow {
   display: table-row;
 }
 
-.divTableCell{
+.divTableCell {
   display: table-cell;
   border: 1px solid #999;
   padding: 3px 10px;
 }
 
-a{
+a {
   text-decoration: none;
   font-weight: bold;
 }
