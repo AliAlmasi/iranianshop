@@ -1,12 +1,12 @@
 <?php
-    include ('./includes/header.php');
+include('./includes/header.php');
 
-    if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
-        ?> <script type="text/javascript">
-            location.replace("index.php")
-        </script><?php
-    }
-?>
+if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
+?> <script type="text/javascript">
+        location.replace("index.php")
+    </script><?php
+            }
+                ?>
 
 <br />
 <form method="post" action="action_login.php" name="login">
@@ -31,5 +31,5 @@
 </form>
 
 <?php
-    include ('./includes/footer.php');
+include('./includes/footer.php');
 ?>
