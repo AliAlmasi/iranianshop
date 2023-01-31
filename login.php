@@ -9,7 +9,7 @@ if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
                 ?>
 
 <br />
-<form method="post" action="action_login.php" name="login">
+<form method="get" action="action_login.php" name="login">
     <table border="0" style="width: 50%;margin-left: auto;margin-right: auto;">
         <tr>
             <td>نام کاربری <span style="color:#ac0000;">*</span></td>

@@ -9,7 +9,7 @@ if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
                 ?>
 
 <br />
-<form method="post" action="action_register.php" name="register">
+<form method="get" action="action_register.php" name="register">
     <table border="0" style="width: 50%;margin-left: auto;margin-right: auto;">
         <tr>
             <td style="width: 40%;">نام واقعی <span style="color:#ac0000;">*</span></td>

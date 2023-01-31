@@ -3,17 +3,17 @@ include('./includes/header.php');
 
 
 if (
-    isset($_POST['realname']) && !empty($_POST['realname']) &&
-    isset($_POST['username']) && !empty($_POST['username']) &&
-    isset($_POST['password']) && !empty($_POST['password']) &&
-    isset($_POST['repassword']) && !empty($_POST['repassword']) &&
-    isset($_POST['email']) && !empty($_POST['email'])
+    isset($_GET['realname']) && !empty($_GET['realname']) &&
+    isset($_GET['username']) && !empty($_GET['username']) &&
+    isset($_GET['password']) && !empty($_GET['password']) &&
+    isset($_GET['repassword']) && !empty($_GET['repassword']) &&
+    isset($_GET['email']) && !empty($_GET['email'])
 ) {
-    $realname = $_POST['realname'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $repassword = $_POST['repassword'];
-    $email = $_POST['email'];
+    $realname = $_GET['realname'];
+    $username = $_GET['username'];
+    $password = $_GET['password'];
+    $repassword = $_GET['repassword'];
+    $email = $_GET['email'];
 } else {
     exit("بعضی از فیلد ها خالی هستند.");
 }

@@ -3,11 +3,11 @@ include('./includes/header.php');
 
 
 if (
-    isset($_POST['username']) && !empty($_POST['username']) &&
-    isset($_POST['password']) && !empty($_POST['password'])
+    isset($_GET['username']) && !empty($_GET['username']) &&
+    isset($_GET['password']) && !empty($_GET['password'])
 ) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_GET['username'];
+    $password = $_GET['password'];
 } else {
     exit("لطفا فرم را کامل کنید.");
 }
