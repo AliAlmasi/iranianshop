@@ -33,8 +33,8 @@ session_start();
             ?><li class="divTableCell"><a href="login.php">ورود به سایت</a></li>
             <?php } ?>
 
-            <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop">درباره ما</a></li>
-            <li class="divTableCell"><a href="http://github.com/alialmasi">ارتباط با ما</a></li>
+            <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop">مخزن گیت</a></li>
+            <li class="divTableCell"><a href="http://github.com/alialmasi">برنامه‌نویس</a></li>
           </ul>
 
         </nav>
