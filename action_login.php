@@ -1,13 +1,12 @@
 <?php
 include('./includes/header.php');
 
-
 if (
-    isset($_GET['username']) && !empty($_GET['username']) &&
-    isset($_GET['password']) && !empty($_GET['password'])
+    isset($_POST['username']) && !empty($_POST['username']) &&
+    isset($_POST['password']) && !empty($_POST['password'])
 ) {
-    $username = $_GET['username'];
-    $password = $_GET['password'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 } else {
     exit("لطفا فرم را کامل کنید.");
 }
@@ -19,23 +18,23 @@ if (mysqli_connect_errno()) {
 }
 
 $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-$response = mysqli_query($link, $query);
-
-$result = mysqli_fetch_array($response);
+$request = mysqli_query($link, $query);
+$result = mysqli_fetch_array($request);
 
 if ($result) {
     $_SESSION["state_login"] = true;
-    $_SESSION["realname"] = $result['$realname'];
+    $_SESSION["realname"] = $result["realname"];
 
-    if ($result["type"] == "0")
-        $_SESSION["usertype"] = "nonadmin";
+    if ($result["u_type"] == 0)
+        $_SESSION["u_type"] = "nonadmin";
 
-    elseif ($result["type"] == "1")
-        $_SESSION["usertype"] = "admin";
+    elseif ($result["u_type"] == 1)
+        $_SESSION["u_type"] = "admin";
 
 
-    echo ("کاربر گرامی <b style='color:darkgreen;'>" . $username . "</b><br>
-    شما با موفقیت واردحساب کاربری خود شدید."); // $result["$realname"]
+    echo ("کاربر گرامی <b style='color:darkgreen;'>" . $result["realname"] . "</b> با نام کاربری <b style='color:darkgreen;'>" . $result["username"] . "</b><br>
+    شما با موفقیت واردحساب کاربری خود شدید.");
+    echo "<br><br><a href='index.php'>به صفحه اصلی بروید</a>";
 } else {
     echo ("<span style='color:#ac0000'>اطلاعات وارد شده صحیح نمی‌باشد.</span>");
 }

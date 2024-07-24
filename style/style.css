@@ -1,44 +1,60 @@
 .divTable {
-  display: table;
-  width: 1024px;
-  font-size: 13pt;
-  font-family: Tahoma, Verdana;
-  margin-left: auto;
-  margin-right: auto;
-  direction: rtl
+	display: table;
+	width: 1024px;
+	font-size: 13pt;
+	font-family: Tahoma, Verdana, sans-serif;
+	margin: 0 auto;
+	direction: rtl;
 }
 
 .divTableRow {
-  display: table-row;
+	display: table-row;
 }
 
 .divTableCell {
-  display: table-cell;
-  border: 1px solid #999;
-  padding: 3px 10px;
+	display: table-cell;
+	border: 1px solid #999;
+	padding: 3px 10px;
 }
 
 a:link,
 a:visited {
-  text-decoration: none;
-  font-weight: bold;
-  color: #e2541c;
+	text-decoration: none;
+	color: #e2541c;
+	transition: color 0.1s, text-shadow 0.1s;
 }
 
 a:hover {
-  font-style: italic;
-  text-shadow: 0px 5px 7px #e2541c80;
+	text-shadow: 0px 3px 5px #e2541c80;
 }
 
 a:active {
-  font-style: italic;
-  text-shadow: none;
+	text-shadow: 0px 3px 10px #4545e780;
+	color: #4545e7;
+}
+
+nav {
+	font-weight: bold;
 }
 
 .siteInfo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.siteTitle {
+	font-size: 16pt;
+}
+
+#siteLogo {
+	max-width: 100px;
+	height: auto;
+}
+
+.ltr {
+	direction: ltr;
+	text-align: left;
 }

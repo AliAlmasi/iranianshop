@@ -5,5 +5,6 @@ session_destroy();
 ?>
 
 <script type="text/javascript">
+    alert("شما با موفقیت از سایت خارج شدید.")
     location.replace("index.php")
 </script>
