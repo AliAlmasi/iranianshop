@@ -3,8 +3,7 @@ include('./includes/header.php');
 
 if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
 ?> <script type="text/javascript">
-        alert("شما قبلا ثبت نام کرده‌اید.")
-        location.replace("index.php")
+        location.replace("./already_logged_in.php");
     </script><?php
             }
                 ?>

@@ -9,6 +9,8 @@ session_start();
   <meta charset="UTF-8">
   <title>فروشگاه ایرانیان</title>
   <link rel="stylesheet" href="./style/style.css" type="text/css">
+  <link rel="stylesheet" href="./style/global.css" type="text/css">
+  <script src="./persianDate.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -17,9 +19,9 @@ session_start();
       <div class="divTableCell">
         <header class="divTable">
           <div class="divTableRow">
-            <div class="divTableCell siteInfo">
+            <div class="divTableCell" id="siteInfo">
               <img src="./files/shir.svg" alt="Logo" id="siteLogo">
-              <strong class="siteTitle">فروشگاه ایرانیان</strong>
+              <strong id="siteTitle">فروشگاه ایرانیان</strong>
             </div>
           </div>
         </header>

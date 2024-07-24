@@ -2,7 +2,7 @@
 	display: table;
 	width: 1024px;
 	font-size: 13pt;
-	font-family: Tahoma, Verdana, sans-serif;
+	font-family: "Vazirmatn", Tahoma, Verdana, sans-serif;
 	margin: 0 auto;
 	direction: rtl;
 }
@@ -17,27 +17,11 @@
 	padding: 3px 10px;
 }
 
-a:link,
-a:visited {
-	text-decoration: none;
-	color: #e2541c;
-	transition: color 0.1s, text-shadow 0.1s;
-}
-
-a:hover {
-	text-shadow: 0px 3px 5px #e2541c80;
-}
-
-a:active {
-	text-shadow: 0px 3px 10px #4545e780;
-	color: #4545e7;
-}
-
 nav {
 	font-weight: bold;
 }
 
-.siteInfo {
+#siteInfo {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -45,7 +29,7 @@ nav {
 	gap: 20px;
 }
 
-.siteTitle {
+#siteTitle {
 	font-size: 16pt;
 }
 
@@ -54,7 +38,6 @@ nav {
 	height: auto;
 }
 
-.ltr {
-	direction: ltr;
-	text-align: left;
+#footer {
+	text-align: center;
 }

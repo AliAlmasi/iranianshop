@@ -8,13 +8,13 @@ if (
     $username = $_POST['username'];
     $password = $_POST['password'];
 } else {
-    exit("لطفا فرم را کامل کنید.");
+    exit("<span class='error'>لطفا فرم را تکمیل کنید.</span>");
 }
 
 $link = mysqli_connect("localhost", "root", "", "iranianshop");
 
 if (mysqli_connect_errno()) {
-    exit("خطایی با شرح زیر رخ داد: " . mysqli_connect_error());
+    exit("<span class='error'>خطایی با شرح زیر رخ داد: <br>" . mysqli_connect_error() . "</span>");
 }
 
 $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
@@ -32,11 +32,15 @@ if ($result) {
         $_SESSION["u_type"] = "admin";
 
 
-    echo ("کاربر گرامی <b style='color:darkgreen;'>" . $result["realname"] . "</b> با نام کاربری <b style='color:darkgreen;'>" . $result["username"] . "</b><br>
-    شما با موفقیت واردحساب کاربری خود شدید.");
+    echo ("<span class='done'>کاربر گرامی {$result["realname"]} (با نام کاربری {$result["username"]}) <br> شما با موفقیت وارد حساب کاربری خود شدید.</span>");
+
+    if ($_SESSION["u_type"] === "admin") {
+        echo "<br><br>شما یک مدیر هستید. (دسترسی admin دارید)";
+    }
+
     echo "<br><br><a href='index.php'>به صفحه اصلی بروید</a>";
 } else {
-    echo ("<span style='color:#ac0000'>اطلاعات وارد شده صحیح نمی‌باشد.</span>");
+    echo ("<span class='error'>اطلاعات وارد شده صحیح نمی‌باشد.</span>");
 }
 
 mysqli_close($link);

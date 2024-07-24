@@ -14,32 +14,31 @@ if (
     $repassword = $_POST['repassword'];
     $email = $_POST['email'];
 } else {
-    exit("بعضی از فیلد ها خالی هستند.");
+    exit("<span class='error'>لطفا فرم را تکمیل کنید.</span>");
 }
 
 if ($password != $repassword) {
-    exit("کلمه عبور و تکرار آن مشابه نیستند.");
+    exit("<span class='error'>کلمه عبور و تکرار آن مشابه نیستند.</span>");
 }
 
 if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
-    exit("پست اکترونیکی وارد شده صحیح نمیباشد.");
+    exit("<span class='error'>پست اکترونیکی وارد شده صحیح نمیباشد.</span>");
 }
 
 
 $link = mysqli_connect("localhost", "root", "", "iranianshop");
 
 if (mysqli_connect_errno()) {
-    exit("خطایی با شرح زیر رخ داد: " . mysqli_connect_error());
+    exit("<span class='error'>خطایی با شرح زیر رخ داد: " . mysqli_connect_error() . "</span>");
 }
 
 $query = "INSERT INTO users (realname, username, password, email, u_type) VALUES
 ('$realname', '$username', '$password', '$email', 0)";
 
 if (mysqli_query($link, $query) === true) {
-    echo ("<b style='color: darkgreen;'>" . $realname . "</b> گرامی<br>عضویت شما با نام کاربری 
-    <b style='color: darkgreen'>" . $username . "</b> در فروشگاه با موفقیت انجام شد.");
+    echo ("<span class='done'>کاربر گرامی {$realname} (با نام کاربری {$username})<br>عضویت شما در فروشگاه با موفقیت انجام شد.</span>");
 } else {
-    echo ("<span style='color:#ac0000'>عضویت شما در فروشگاه انجام نشد.</span>");
+    echo ("<span class='error'>عضویت شما در فروشگاه انجام نشد.</span>");
 }
 
 
