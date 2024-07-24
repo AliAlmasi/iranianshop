@@ -35,7 +35,7 @@ if ($result) {
     echo ("<span class='done'>کاربر گرامی {$result["realname"]} (با نام کاربری {$result["username"]}) <br> شما با موفقیت وارد حساب کاربری خود شدید.</span>");
 
     if ($_SESSION["u_type"] === "admin") {
-        echo "<br><br>شما یک مدیر هستید. (دسترسی admin دارید)";
+        echo "<br><br><span class='warn'>شما یک مدیر هستید. (دسترسی admin دارید)</span>";
     }
 
     echo "<br><br><a href='index.php'>به صفحه اصلی بروید</a>";

@@ -40,10 +40,22 @@ a:active {
 	font-weight: bold;
 }
 
+.error::after {
+	content: " ❌";
+}
+
 .done {
 	color: darkgreen;
 }
 
 .done::after {
 	content: " ✅";
+}
+
+.warn {
+	color: orangered;
+}
+
+.warn::after {
+	content: " ⚠️";
 }
