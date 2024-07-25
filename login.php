@@ -10,13 +10,13 @@ if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
 
 <br />
 <form method="post" action="action_login.php" name="login">
-    <table border="0" style="width: 50%;margin-left: auto;margin-right: auto;">
+    <table border="0" style="width: 50%;margin:0 auto;">
         <tr>
-            <td>نام کاربری <span style="color:#ac0000;">*</span></td>
+            <td>نام کاربری <span class="required">*</span></td>
             <td><input type="text" id="username" name="username" class="ltr" title="فقط حروف لاتین" /></td>
         </tr>
         <tr>
-            <td>کلمه عبور <span style="color:#ac0000;">*</span></td>
+            <td>کلمه عبور <span class="required">*</span></td>
             <td><input type="password" id="password" name="password" class="ltr" title="اعداد، علائم و حروف لاتین" /></td>
         </tr>
         <tr>

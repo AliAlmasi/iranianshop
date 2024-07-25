@@ -25,12 +25,7 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
     exit("<span class='error'>پست اکترونیکی وارد شده صحیح نمیباشد.</span>");
 }
 
-
-$link = mysqli_connect("localhost", "root", "", "iranianshop");
-
-if (mysqli_connect_errno()) {
-    exit("<span class='error'>خطایی با شرح زیر رخ داد: " . mysqli_connect_error() . "</span>");
-}
+include("./includes/db_link.php");
 
 $query = "INSERT INTO users (realname, username, password, email, u_type) VALUES
 ('$realname', '$username', '$password', '$email', 0)";

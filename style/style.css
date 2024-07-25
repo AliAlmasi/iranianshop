@@ -27,6 +27,18 @@ nav {
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
+	user-select: none;
+}
+
+#siteInfo__text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#siteInfo__text span {
+	font-size: 11pt;
 }
 
 #siteTitle {
@@ -36,6 +48,11 @@ nav {
 #siteLogo {
 	max-width: 100px;
 	height: auto;
+}
+
+#DateTime {
+	text-align: center;
+	font-style: italic;
 }
 
 #footer {

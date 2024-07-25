@@ -10,7 +10,6 @@ session_start();
   <title>فروشگاه ایرانیان</title>
   <link rel="stylesheet" href="./style/style.css" type="text/css">
   <link rel="stylesheet" href="./style/global.css" type="text/css">
-  <script src="./persianDate.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -20,8 +19,11 @@ session_start();
         <header class="divTable">
           <div class="divTableRow">
             <div class="divTableCell" id="siteInfo">
-              <img src="./files/shir.svg" alt="Logo" id="siteLogo">
-              <strong id="siteTitle">فروشگاه ایرانیان</strong>
+              <img src="./images/shir.svg" alt="Logo" id="siteLogo" title="شیر و خورشید یکی از نماد های ایرانیان است.">
+              <div id="siteInfo__text">
+                <strong id="siteTitle">فروشگاه ایرانیان</strong>
+                <span>نسخه 1.0</span>
+              </div>
             </div>
           </div>
         </header>
@@ -33,14 +35,29 @@ session_start();
             <?php
             if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) { ?>
               <li class="divTableCell"><a href="logout.php">خروج از سایت
-                  <span>
+                  <span style="font-style:  italic;">
                     (<?php echo ($_SESSION["realname"]); ?>)
                   </span></a></li>
             <?php } else {
-            ?><li class="divTableCell"><a href="login.php">ورود به سایت</a></li>
+            ?>
+              <li class="divTableCell"><a href="login.php">ورود به سایت</a></li>
             <?php } ?>
-            <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop" target="_blank">کد منبع</a></li>
-            <li class="divTableCell"><a href="http://al1almasi.ir" target="_blank">برنامه‌نویس</a></li>
+            <?php
+            if (
+              isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true &&
+              $_SESSION["u_type"] === "admin"
+            ) {
+            ?>
+              <li class="divTableCell"><a href="admin_products.php">مدیریت محصولات</a></li>
+              <li class="divTableCell"><a href="edit_profile.php" target="_blank">مدیریت حساب کاربری</a></li>
+            <?php
+            } else {
+            ?>
+              <li class="divTableCell"><a href="http://parchlinux.com" target="_blank">پارچ لینوکس</a></li>
+              <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop" target="_blank">مخزن کد منبع</a></li>
+            <?php
+            }
+            ?>
           </ul>
 
         </nav>

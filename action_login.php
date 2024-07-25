@@ -11,11 +11,7 @@ if (
     exit("<span class='error'>لطفا فرم را تکمیل کنید.</span>");
 }
 
-$link = mysqli_connect("localhost", "root", "", "iranianshop");
-
-if (mysqli_connect_errno()) {
-    exit("<span class='error'>خطایی با شرح زیر رخ داد: <br>" . mysqli_connect_error() . "</span>");
-}
+include("./includes/db_link.php");
 
 $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 $request = mysqli_query($link, $query);
@@ -35,10 +31,10 @@ if ($result) {
     echo ("<span class='done'>کاربر گرامی {$result["realname"]} (با نام کاربری {$result["username"]}) <br> شما با موفقیت وارد حساب کاربری خود شدید.</span>");
 
     if ($_SESSION["u_type"] === "admin") {
-        echo "<br><br><span class='warn'>شما یک مدیر هستید. (دسترسی admin دارید)</span>";
+        echo "<br><br><span class='warn'>شما یک مدیر هستید.</span>";
     }
 
-    echo "<br><br><a href='index.php'>به صفحه اصلی بروید</a>";
+    echo "<br><br><a href='index.php'>به صفحه اصلی بروید <span style='font-weight:bold;font-size:22px'>&leftarrow;</span></a>";
 } else {
     echo ("<span class='error'>اطلاعات وارد شده صحیح نمی‌باشد.</span>");
 }
