@@ -43,18 +43,26 @@ session_start();
               <li class="divTableCell"><a href="login.php">ورود به سایت</a></li>
             <?php } ?>
             <?php
-            if (
-              isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true &&
-              $_SESSION["u_type"] === "admin"
-            ) {
+            if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
+              if ($_SESSION["u_type"] === "admin") {
             ?>
-              <li class="divTableCell"><a href="admin_products.php">مدیریت محصولات</a></li>
-              <li class="divTableCell"><a href="edit_profile.php" target="_blank">مدیریت حساب کاربری</a></li>
-            <?php
+                <li class="divTableCell"><a href="edit_profile.php" target="_blank">مدیریت حساب کاربری</a></li>
+                <li class="divTableCell"><a href="admin_products.php">مدیریت محصولات</a></li>
+              <?php
+              }
+
+              if ($_SESSION["u_type"] !== "admin") {
+              ?>
+                <li class="divTableCell"><a href="edit_profile.php" target="_blank">مدیریت حساب کاربری</a></li>
+                <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop" target="_blank">مخزن کد منبع</a></li>
+              <?php
+              }
             } else {
-            ?>
+              ?>
+
               <li class="divTableCell"><a href="http://parchlinux.com" target="_blank">پارچ لینوکس</a></li>
               <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop" target="_blank">مخزن کد منبع</a></li>
+
             <?php
             }
             ?>
