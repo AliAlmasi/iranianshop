@@ -11,6 +11,8 @@ if ((isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true && $_S
 <?php
 }
 
+include("./includes/db_link.php");
+
 if (
 	isset($_POST['id']) && !empty($_POST['id']) &&
 	isset($_POST['name']) && !empty($_POST['name']) &&
@@ -59,10 +61,10 @@ if ($image_filetype !== "jpg" && $image_filetype !== "png") {
 }
 
 if ($upload_code === 0) {
-	echo "<span class='error'>فایل انتخاب شده به سرور ارسال نشد.</span>";
+	echo "<span class='error'>فایل انتخاب شده به سرور ارسال نشد.</span><br>";
 } else {
 	if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-		echo "<span class='done'>فایل {$_FILES['image']['name']} با موفقیت به سرور ارسال شد.</span>";
+		echo "<span class='done'>فایل {$_FILES['image']['name']} با موفقیت به سرور ارسال شد.</span><br>";
 		$upload_code = 1;
 	} else {
 		echo "<span class='error'>خطایی در ارسال فایل عکس به سرور رخ داد.</span><br>";
@@ -76,12 +78,12 @@ if ($upload_code === 1) {
 	VALUES (`{$id}`, `{$name}`, `{$qty}`, `{$price}`, `{$image}`, `{$details}`)";
 	$request = mysqli_query($link, $query);
 	if ($request) {
-		echo "<span class='done'>کالا با موفقیت اضافه شد.</span>";
+		echo "<span class='done'>کالا با موفقیت اضافه شد.</span><br>";
 	} else {
-		echo "<span class='error'>خطایی در ثبت مشخصات کالا رخ داد.</span>";
+		echo "<span class='error'>خطایی در سمت دیتابیس حین ثبت مشخصات کالا رخ داد.</span><br>";
 	}
 } else {
-	echo "<span class='error'>خطایی در ثبت مشخصات کالا رخ داد.</span>";
+	echo "<span class='error'>خطایی کلی در ثبت مشخصات کالا رخ داد.</span><br>";
 }
 
 mysqli_close($link);

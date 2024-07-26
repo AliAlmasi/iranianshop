@@ -35,7 +35,7 @@ session_start();
             <?php
             if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) { ?>
               <li class="divTableCell"><a href="logout.php">خروج از سایت
-                  <span style="font-style:  italic;">
+                  <span style="font-weight:normal">
                     (<?php echo ($_SESSION["realname"]); ?>)
                   </span></a></li>
             <?php } else {
