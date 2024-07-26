@@ -10,7 +10,7 @@
 	font-weight: 700;
 }
 
-body {
+body, input, textarea {
 	font-family: "Vazirmatn", Tahoma, Verdana, sans-serif;
 }
 
