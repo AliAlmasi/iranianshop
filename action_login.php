@@ -20,6 +20,8 @@ $result = mysqli_fetch_array($request);
 if ($result) {
     $_SESSION["state_login"] = true;
     $_SESSION["realname"] = $result["realname"];
+	$_SESSION["username"] = $result["username"];
+	$_SESSION["email"] = $result["email"];
 
     if ($result["u_type"] == 0)
         $_SESSION["u_type"] = "nonadmin";
