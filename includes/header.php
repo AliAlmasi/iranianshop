@@ -3,7 +3,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fa-IR">
 
 <head>
   <meta charset="UTF-8">
@@ -18,7 +18,7 @@ session_start();
       <div class="divTableCell">
         <header class="divTable">
           <div class="divTableRow">
-            <div class="divTableCell" id="siteInfo">
+            <div class="divTableCell" id="siteInfo" style="cursor: pointer" onClick="location.replace('index.php');">
               <img src="./images/shir.svg" alt="Logo" id="siteLogo" title="شیر و خورشید یکی از نماد های ایرانیان است.">
               <div id="siteInfo__text">
                 <strong id="siteTitle">فروشگاه ایرانیان</strong>
@@ -46,8 +46,8 @@ session_start();
             if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
               if ($_SESSION["u_type"] === "admin") {
             ?>
-                <li class="divTableCell"><a href="edit_profile.php" target="_blank">مدیریت حساب کاربری</a></li>
-                <li class="divTableCell"><a href="admin_products.php">مدیریت محصولات</a></li>
+                <li class="divTableCell"><a href="edit_profile.php">مدیریت حساب</a></li>
+                <li class="divTableCell"><a href="admin_products.php">محصول جدید</a></li>
               <?php
               }
 
