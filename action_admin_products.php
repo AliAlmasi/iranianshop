@@ -74,8 +74,7 @@ if ($upload_code === 0) {
 
 if ($upload_code === 1) {
 	include("./includes/db_link.php");
-	$query = "INSERT INTO `products` (`id`, `name`, `qty`, `price`, `image`, `details`)
-	VALUES (`{$id}`, `{$name}`, `{$qty}`, `{$price}`, `{$image}`, `{$details}`)";
+	$query = "INSERT INTO `products`(`id`, `name`, `qty`, `price`, `image`, `details`) VALUES ('$id','$name','$qty','$price','$image','$details')";
 	$request = mysqli_query($link, $query);
 	if ($request) {
 		echo "<span class='done'>کالا با موفقیت اضافه شد.</span><br>";
