@@ -11,7 +11,7 @@ $request = mysqli_query( $link, $query );
         while ( $row = mysqli_fetch_array( $request ) ) {
             $counter++;
             ?>
-        <td style='border:1px solid #999;vertical-align:top;width:33%;'><a href="product.php?id=<?php echo $row["id"];?>"><h4 style='color: saddlebrown;text-align: center'><?php echo $row["name"];?></h4>
+        <td style='border:1px solid #999;vertical-align:top;width:33%;'><a href="product.php?id=<?php echo $row["id"];?>"><h4 style='color:saddlebrown;text-align:center;margin:10px 0'><?php echo $row["name"];?></h4>
              <img src='products/<?php echo $row["image"];?>' width="250px" height="150px"> </a> <br>
             <span>قیمت: <?php echo substr(number_format($row["price"], 2, "", ","), 0, -2);?> تومان</span> <br>
             <span>موجودی: <?php echo $row["qty"];?> </span> <br>
