@@ -10,6 +10,7 @@ session_start();
   <title>فروشگاه ایرانیان</title>
   <link rel="stylesheet" href="./style/style.css" type="text/css">
   <link rel="stylesheet" href="./style/global.css" type="text/css">
+  <link rel="shortcut icon" href="./images/shir.svg" type="image/svg">
 </head>
 
 <body>
