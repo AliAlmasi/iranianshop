@@ -36,7 +36,7 @@ if ((isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true && $_S
 		</tr>
 		<tr>
 			<td>توضیحات کالا <span class="required">*</span></td>
-			<td><textarea style="font-family:'Vazirmatn';font-size:14px" id="details" name="details" cols="30" rows="7" wrap="virtual"></textarea></td>
+			<td><textarea style="font-size:14px" id="details" name="details" cols="30" rows="7" wrap="virtual"></textarea></td>
 		</tr>
 		<tr>
 			<td><br><br></td>

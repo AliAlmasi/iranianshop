@@ -10,7 +10,9 @@
 	font-weight: 700;
 }
 
-body, input, textarea {
+body,
+input,
+textarea {
 	font-family: "Vazirmatn", Tahoma, Verdana, sans-serif;
 }
 
@@ -35,8 +37,7 @@ input[type='reset'],
 input[type='radio'],
 input[type='checkbox'],
 input[type='file'],
-input[type='button']
-{
+input[type='button'] {
 	cursor: pointer;
 }
 
@@ -72,4 +73,11 @@ input[type='button']
 
 .required {
 	color: #ac0000;
+}
+
+.readonly {
+	background-color: #eee;
+	cursor: not-allowed;
+	border: 0;
+	padding: 4px;
 }
