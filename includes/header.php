@@ -53,7 +53,7 @@ session_start();
 
               if ($_SESSION["u_type"] !== "admin") {
               ?>
-                <li class="divTableCell"><a href="edit_profile.php" target="_blank">مدیریت حساب کاربری</a></li>
+                <li class="divTableCell"><a href="edit_profile.php">مدیریت حساب کاربری</a></li>
                 <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop" target="_blank">مخزن کد منبع</a></li>
               <?php
               }

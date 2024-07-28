@@ -30,6 +30,16 @@ a:active {
 	color: #4545e7;
 }
 
+input[type='submit'],
+input[type='reset'],
+input[type='radio'],
+input[type='checkbox'],
+input[type='file'],
+input[type='button']
+{
+	cursor: pointer;
+}
+
 .ltr {
 	direction: ltr;
 	text-align: left;
