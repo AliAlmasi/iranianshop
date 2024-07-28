@@ -31,10 +31,20 @@ if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] !== true) {
 				<input type="reset" value="پاک">
 			</td>
 		</tr>
+		<tr>
+			<td><br></td>
+			<td><input type='button' onclick='delete_user()' value='حدف حساب کاربری' style='color:red'></td>
+		</tr>
 	</table>
 </form>
 <script type="text/javascript">
 	document.getElementById("realname").value = "<?php echo $_SESSION['realname'] ?>";
 	document.getElementById("username").value = "<?php echo $_SESSION['username'] ?>";
 	document.getElementById("email").value = "<?php echo $_SESSION['email'] ?>";
+
+	function delete_user () {
+		if (confirm("آیا از حذف حساب کاربری خود مطمئن هستید؟")) {
+			location.replace("action_delete_user.php");
+		}
+	}
 </script>
