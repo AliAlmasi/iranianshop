@@ -60,7 +60,7 @@ session_start();
             } else {
               ?>
 
-              <li class="divTableCell"><a href="about/" target="_blank">درباره ما</a></li>
+              <li class="divTableCell"><a href="docs/" target="_blank">درباره ما</a></li>
               <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop" target="_blank">مخزن کد منبع</a></li>
 
             <?php
