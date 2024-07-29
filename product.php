@@ -33,7 +33,7 @@ $request = mysqli_query($link, $query);
                 <span style='font-size:18px'>موجودی: <?php echo $row["qty"]; ?> </span> <br>
                 <span style="font-size: 14px; text-align: justify">توضیحات: <?php echo $row["details"]; ?> </span> <br>
                 <br>
-                <strong><a href='order.php?id=<?php echo $row["id"]; ?>'>سفارش این محصول &leftarrow;</a></strong>
+                <strong><a href='order.php?id=<?php echo $row["id"]; ?>'>سفارش این کالا &leftarrow;</a></strong>
             </td>
             </td>
         <?php

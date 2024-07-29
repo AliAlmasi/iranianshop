@@ -108,7 +108,7 @@ CSS شامل مجموعه‌ای از قواعده که هرکدوم شامل د
 
 ```css
 Selector {
-	property: Value;
+ property: Value;
 }
 ```
 
@@ -159,18 +159,18 @@ Selector {
 
 ```html
 <html>
-	<head>
-		<title>نام کاربر</title>
-		<style>
-			#userName {
-				color: blue;
-				text-align: center;
-			}
-		</style>
-	</head>
-	<body>
-		<p id="userName">کاربر گرامی آقای حمیدی</p>
-	</body>
+ <head>
+  <title>نام کاربر</title>
+  <style>
+   #userName {
+    color: blue;
+    text-align: center;
+   }
+  </style>
+ </head>
+ <body>
+  <p id="userName">کاربر گرامی آقای حمیدی</p>
+ </body>
 </html>
 ```
 
@@ -186,8 +186,8 @@ style.css:
 
 ```css
 #userName {
-	color: blue;
-	text-align: center;
+ color: blue;
+ text-align: center;
 }
 ```
 
@@ -195,12 +195,12 @@ user.html:
 
 ```html
 <html>
-	<head>
-		<title>نام کاربر</title>
-	</head>
-	<body>
-		<p id="userName">کاربر گرامی آقای حمیدی</p>
-	</body>
+ <head>
+  <title>نام کاربر</title>
+ </head>
+ <body>
+  <p id="userName">کاربر گرامی آقای حمیدی</p>
+ </body>
 </html>
 ```
 
@@ -222,9 +222,9 @@ user.html:
 
 <pre lang="css">
 .divTable {
-	<u>display: table;</u>
-	font-family: tahoma;
-	direction: rtl;
+ <u>display: table;</u>
+ font-family: tahoma;
+ direction: rtl;
 }
 </pre>
 
@@ -240,28 +240,28 @@ user.html:
 
 ```html
 <html>
-	<head>
-		<title>ساختار جدولی</title>
-	</head>
-	<body>
-		<table dir="rtl" border="3px" align="center" cellpadding="10px" cellspacing="5px">
-			<tr>
-				<td>سطر اول، ستون اول</td>
-				<td>سطر اول،‌ ستون دوم</td>
-				<td>سطر اول،‌ ستون سوم</td>
-			</tr>
-			<tr>
-				<td>سطر دوم، ستون اول</td>
-				<td>سطر دوم، ستون دوم</td>
-				<td>سطر دوم، ستون سوم</td>
-			</tr>
-			<tr>
-				<td>سطر سوم، ستون اول</td>
-				<td>سطر سوم، ستون دوم</td>
-				<td>سطر سوم، ستون سوم</td>
-			</tr>
-		</table>
-	</body>
+ <head>
+  <title>ساختار جدولی</title>
+ </head>
+ <body>
+  <table dir="rtl" border="3px" align="center" cellpadding="10px" cellspacing="5px">
+   <tr>
+    <td>سطر اول، ستون اول</td>
+    <td>سطر اول،‌ ستون دوم</td>
+    <td>سطر اول،‌ ستون سوم</td>
+   </tr>
+   <tr>
+    <td>سطر دوم، ستون اول</td>
+    <td>سطر دوم، ستون دوم</td>
+    <td>سطر دوم، ستون سوم</td>
+   </tr>
+   <tr>
+    <td>سطر سوم، ستون اول</td>
+    <td>سطر سوم، ستون دوم</td>
+    <td>سطر سوم، ستون سوم</td>
+   </tr>
+  </table>
+ </body>
 </html>
 ```
 
@@ -276,21 +276,21 @@ user.html:
 خروجی‌ش این شکلی میشه:
 
 <table dir="rtl" border="3px" align="center" cellpadding="10px" cellspacing="5px">
-	<tr>
-		<td>سطر اول، ستون اول</td>
-		<td>سطر اول،‌ ستون دوم</td>
-		<td>سطر اول،‌ ستون سوم</td>
-	</tr>
-	<tr>
-		<td>سطر دوم، ستون اول</td>
-		<td>سطر دوم، ستون دوم</td>
-		<td>سطر دوم، ستون سوم</td>
-	</tr>
-	<tr>
-		<td>سطر سوم، ستون اول</td>
-		<td>سطر سوم، ستون دوم</td>
-		<td>سطر سوم، ستون سوم</td>
-	</tr>
+ <tr>
+  <td>سطر اول، ستون اول</td>
+  <td>سطر اول،‌ ستون دوم</td>
+  <td>سطر اول،‌ ستون سوم</td>
+ </tr>
+ <tr>
+  <td>سطر دوم، ستون اول</td>
+  <td>سطر دوم، ستون دوم</td>
+  <td>سطر دوم، ستون سوم</td>
+ </tr>
+ <tr>
+  <td>سطر سوم، ستون اول</td>
+  <td>سطر سوم، ستون دوم</td>
+  <td>سطر سوم، ستون سوم</td>
+ </tr>
 </table>
 
 با یکم تمرین و استفاده از کارگاه ۱ صفحه ۱۰۹ کتاب، میتونین خیلی راحت جدول وب درست کنین
@@ -315,8 +315,8 @@ user.html:
 
 ```html
 <video controls="true" width="480px" height="640px">
-	<source src="/path/to/video.mp4" type="video/mp4">
-	متن موردنظر برای نمایش درصورت پشتیبانی نکردن مرورگر از ویدیو
+ <source src="/path/to/video.mp4" type="video/mp4">
+ متن موردنظر برای نمایش درصورت پشتیبانی نکردن مرورگر از ویدیو
 </video>
 ```
 
@@ -328,8 +328,8 @@ user.html:
 
 ```html
 <audio controls="true">
-	<source src="/path/to/audio.mp3" type="audio/mpeg">
-		متن موردنظر برای نمایش درصورت پشتیبانی نکردن مرورگر از فایل صوتی
+ <source src="/path/to/audio.mp3" type="audio/mpeg">
+  متن موردنظر برای نمایش درصورت پشتیبانی نکردن مرورگر از فایل صوتی
 </audio>
 ```
 
@@ -364,20 +364,20 @@ user.html:
 
 ```html
 <html>
-	<head>
-		<title>Web Form</title>
-	</head>
-	<body>
-		<form method="get" action="action_login.php" name="login">
-			<p>نام کاربری</p>
-			<input type="text" id="username" name="username" />
-			<p>کلمه عبور</p>
-			<input type="password" id="password" name="password" />
-			<p>&nbsp;</p>
-			<input type="submit" value="ورود" />
-			<input type="reset" value="پاک" />
-		</form>
-	</body>
+ <head>
+  <title>Web Form</title>
+ </head>
+ <body>
+  <form method="get" action="action_login.php" name="login">
+   <p>نام کاربری</p>
+   <input type="text" id="username" name="username" />
+   <p>کلمه عبور</p>
+   <input type="password" id="password" name="password" />
+   <p>&nbsp;</p>
+   <input type="submit" value="ورود" />
+   <input type="reset" value="پاک" />
+  </form>
+ </body>
 </html>
 ```
 
@@ -416,20 +416,20 @@ user.html:
 
 ```html
 <html>
-	<head>
-		<title>Internal Javascript</title>
-		<script type="text/javascript">
-			const text = window.confirm("Salam az Javascript");
+ <head>
+  <title>Internal Javascript</title>
+  <script type="text/javascript">
+   const text = window.confirm("Salam az Javascript");
 
-			if (text) document.querySelector("p.text").textContent = "True";
-			else document.querySelector("p.text").textContent = "False";
+   if (text) document.querySelector("p.text").textContent = "True";
+   else document.querySelector("p.text").textContent = "False";
 
-			// text ? document.querySelector("p.text").textContent = "True" : document.querySelector("p.text").textContent = "False";
-		</script>
-	</head>
-	<body>
-		<p class="text">Null</p>
-	</body>
+   // text ? document.querySelector("p.text").textContent = "True" : document.querySelector("p.text").textContent = "False";
+  </script>
+ </head>
+ <body>
+  <p class="text">Null</p>
+ </body>
 </html>
 ```
 
@@ -441,13 +441,13 @@ user.html:
 
 ```html
 <html>
-	<head>
-		<title>External Javascript</title>
-		<script type="text/javascript" src="./script.js"></script>
-	</head>
-	<body>
-		<p class="text">Null</p>
-	</body>
+ <head>
+  <title>External Javascript</title>
+  <script type="text/javascript" src="./script.js"></script>
+ </head>
+ <body>
+  <p class="text">Null</p>
+ </body>
 </html>
 ```
 
@@ -480,16 +480,16 @@ window.alert("سلام دنیا!");
 اگه کاربر دکمه OK رو بزنه `true` و اگه Cancel رو بزنه `false` میشه.
 
 ```js
-window.confirm("آیا از حذف حساب کاربری خود مطمئن هستید؟");
+window.confirm("آیا از حذف نمایه کاربری خود مطمئن هستید؟");
 ```
 
 خروجی این متد رو میتونین داخل یه متغیر ذخیره و از اون داخل شرط `if` استفاده کنین:
 
 ```js
-var deleteConfirm = window.confirm("آیا از حذف حساب کاربری خود مطمئن هستید؟");
+var deleteConfirm = window.confirm("آیا از حذف نمایه کاربری خود مطمئن هستید؟");
 
 if (deleteConfirm) {
-	window.alert(حساب کاربری شما حذف شد.);
+ window.alert(نمایه کاربری شما حذف شد.);
 }
 ```
 
@@ -501,8 +501,8 @@ if (deleteConfirm) {
 
 ```js
 function Multiply (a, b) {
-	var c = a * b;
-	window.alert(c);
+ var c = a * b;
+ window.alert(c);
 }
 
 Multiply(12, 9);
@@ -512,8 +512,8 @@ Multiply(12, 9);
 
 ```js
 function Multiply (a, b) {
-	var c = a * b;
-	return c;
+ var c = a * b;
+ return c;
 }
 
 console.log(Multiply(12, 9));
@@ -542,25 +542,25 @@ console.log(Multiply(12, 9));
 
 ```html
 <html>
-	<head>
-		<title>Web Events</title>
-		<script type="text/javascript">
-			function showUsername() {
-				window.alert(
-					"داده وارد شده: \n" + document.getElementById("username").value
-				);
-			}
-		</script>
-	</head>
-	<body>
-		<input
-			type="password"
-			name="username"
-			id="username"
-			onchange="window.alert('ورودی عوض شد');"
-		/>
-		<input type="submit" value="نمایش" onclick="showUsername()"
-	</body>
+ <head>
+  <title>Web Events</title>
+  <script type="text/javascript">
+   function showUsername() {
+    window.alert(
+     "داده وارد شده: \n" + document.getElementById("username").value
+    );
+   }
+  </script>
+ </head>
+ <body>
+  <input
+   type="password"
+   name="username"
+   id="username"
+   onchange="window.alert('ورودی عوض شد');"
+  />
+  <input type="submit" value="نمایش" onclick="showUsername()"
+ </body>
 </html>
 ```
 
@@ -577,17 +577,17 @@ console.log(Multiply(12, 9));
 
 ```html
 <html>
-	<head>
-		<title>getElementById</title>
-		<script type="text/javascript">
-			var user = "Ali"
+ <head>
+  <title>getElementById</title>
+  <script type="text/javascript">
+   var user = "Ali"
 
-			document.getElementById("welcome").textContent = "Welcome, "+user;
-		</script>
-	</head>
-	<body>
-		<p id="welcome">
-	</body>
+   document.getElementById("welcome").textContent = "Welcome, "+user;
+  </script>
+ </head>
+ <body>
+  <p id="welcome">
+ </body>
 </html>
 ```
 
@@ -597,17 +597,17 @@ console.log(Multiply(12, 9));
 
 ```html
 <html>
-	<head>
-		<title>location.replace</title>
-		<script type="text/javascript">
-			function replace () {
-				location.replace("http://al1almasi.ir");
-			}
-		</script>
-	</head>
-	<body>
-		<input type='button' value="به صفحه علی الماسی بروید" onClick="replace()">
-	</body>
+ <head>
+  <title>location.replace</title>
+  <script type="text/javascript">
+   function replace () {
+    location.replace("http://al1almasi.ir");
+   }
+  </script>
+ </head>
+ <body>
+  <input type='button' value="به صفحه علی الماسی بروید" onClick="replace()">
+ </body>
 </html>
 ```
 
@@ -638,12 +638,12 @@ console.log(Multiply(12, 9));
 
 ```php
 <html>
-	<body>
-		<?php
-			# :دستورات پی‌اچ‌پی در اینجا قرار میگیرند، مثلا
-			echo "Hello, World!";
-		?>
-	</body>
+ <body>
+  <?php
+   # :دستورات پی‌اچ‌پی در اینجا قرار میگیرند، مثلا
+   echo "Hello, World!";
+  ?>
+ </body>
 </html>
 ```
 
@@ -675,8 +675,8 @@ console.log(Multiply(12, 9));
 
 ```php
 <?php
-	echo "<h1>Hello from PHP</h1>";
-	echo "<p>I am learning PHP</p>";	
+ echo "<h1>Hello from PHP</h1>";
+ echo "<p>I am learning PHP</p>"; 
 ?>
 ```
 
@@ -684,10 +684,10 @@ console.log(Multiply(12, 9));
 
 ```html
 <html>
-	<body>
-		<h1>Hello from PHP</h1>
-		<p>I am learning PHP</p>
-	</body>
+ <body>
+  <h1>Hello from PHP</h1>
+  <p>I am learning PHP</p>
+ </body>
 </html>
 ```
 
@@ -732,7 +732,7 @@ $userData = array(false, 512, "RW");
 
 ```php
 <?php
-	echo("PHP" . "is" . "Fun");
+ echo("PHP" . "is" . "Fun");
 ?>
 ```
 
@@ -930,9 +930,9 @@ echo($name . " " . $age);
 $score = 8;
 
 if ($score > 10) {
-	$color = "green";
+ $color = "green";
 } else {
-	$color = "red";
+ $color = "red";
 }
 ```
 
@@ -950,18 +950,18 @@ $colors = array("red", "green", "blue");
 $index = 1;
 
 switch ($index) {
-	case 0:
-		echo "<span style='color:{$colors[$index]}'>این رنگ انتخاب شده است.</span>";
-		break;
-	case 1:
-		echo "<span style='color:{$colors[$index]}'>این رنگ انتخاب شده است.</span>";
-		break;
-	case 2:
-		echo "<span style='color:{$colors[$index]}'>این رنگ انتخاب شده است.</span>";
-		break;
-	default:
-		echo "<span style='color:gray'>هیچ رنگی انتخاب نشده است.</span>";
-		break;
+ case 0:
+  echo "<span style='color:{$colors[$index]}'>این رنگ انتخاب شده است.</span>";
+  break;
+ case 1:
+  echo "<span style='color:{$colors[$index]}'>این رنگ انتخاب شده است.</span>";
+  break;
+ case 2:
+  echo "<span style='color:{$colors[$index]}'>این رنگ انتخاب شده است.</span>";
+  break;
+ default:
+  echo "<span style='color:gray'>هیچ رنگی انتخاب نشده است.</span>";
+  break;
 }
 ```
 
@@ -975,7 +975,7 @@ switch ($index) {
 
 ```php
 for ($i = 0; $i < 5; $i++){
-	echo "<p align='center'>{$i}</p>";
+ echo "<p align='center'>{$i}</p>";
 }
 ```
 
@@ -991,7 +991,7 @@ for ($i = 0; $i < 5; $i++){
 $names = array("ali", "hassan", "hossein", "amir");
 
 foreach($names as $each_name) {
-	echo "<h2 style='color:red;'>{$each_name}</h2>";
+ echo "<h2 style='color:red;'>{$each_name}</h2>";
 }
 ```
 
@@ -1004,12 +1004,12 @@ $names = array("ali", "hassan", "hossein", "amir");
 
 $i = 17;
 foreach($names as $each_name) {
-	$ages["{$each_name}"] = $i;
-	$i++;
+ $ages["{$each_name}"] = $i;
+ $i++;
 }
 
 foreach($ages as $name => $age) {
-	echo "<p>سن {$name} برابر {$age} است.</p>";
+ echo "<p>سن {$name} برابر {$age} است.</p>";
 }
 ```
 
@@ -1026,9 +1026,9 @@ $counter = 1;
 $code = "";
 
 while($counter <= 5) {
-	$code .= "<input type='text' id='student$counter' name='student$counter'/>  نام و نام خانوادگی دانش آموز شماره $counter <br>";
+ $code .= "<input type='text' id='student$counter' name='student$counter'/>  نام و نام خانوادگی دانش آموز شماره $counter <br>";
 
-	$counter++;
+ $counter++;
 }
 
 echo($code);
@@ -1058,4 +1058,4 @@ include("head.php")
 
 ## دریافت اطلاعات از فرم (صفحه ۱۶۷)
 
-در بخش ساخت فرم (از صفحه ۱۲۲ تا ۱۲۹) در فایل 
+در بخش ساخت فرم (از صفحه ۱۲۲ تا ۱۲۹) در فایل

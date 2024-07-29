@@ -34,9 +34,9 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'شماره سفارش',
   `username` varchar(30) COLLATE utf8_persian_ci NOT NULL COMMENT 'نام کاربری سفارش دهنده',
   `orderdate` date NOT NULL COMMENT 'تاریخ سفارش',
-  `pro_id` int(10) NOT NULL COMMENT 'کد محصول',
+  `pro_id` int(10) NOT NULL COMMENT 'کد کالا',
   `pro_qty` int(10) NOT NULL COMMENT 'تعداد سفارش',
-  `pro_price` float NOT NULL COMMENT 'قیمت پایه محصول',
+  `pro_price` float NOT NULL COMMENT 'قیمت پایه کالا',
   `number` varchar(11) COLLATE utf8_persian_ci NOT NULL COMMENT 'شماره تماس',
   `address` varchar(400) COLLATE utf8_persian_ci NOT NULL COMMENT 'آدرس',
   `trackcode` varchar(24) COLLATE utf8_persian_ci NOT NULL COMMENT 'کد مرسوله پستی',
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `image` varchar(80) COLLATE utf8_persian_ci NOT NULL COMMENT 'عکس کالا',
   `details` text COLLATE utf8_persian_ci NOT NULL COMMENT 'توضیحات کالا',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1118 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci COMMENT='جدول محصولات';
+) ENGINE=InnoDB AUTO_INCREMENT=1118 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci COMMENT='جدول کالاها';
 
 --
 -- Dumping data for table `products`

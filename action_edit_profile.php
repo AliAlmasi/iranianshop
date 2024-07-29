@@ -23,7 +23,7 @@ $query = "UPDATE users SET `realname`='$new_realname',`username`='$new_username'
 
 if (mysqli_query($link, $query) === true) {
     echo ("<span class='done'>کاربر گرامی {$new_realname} (با نام کاربری {$new_username})<br>اطلاعات شما با موفقیت بروزرسانی شد.</span><br>");
-	echo ("<span class='warn'><a href='logout.php'>برای تکمیل بروزرسانی، یک‌بار از حساب کاربری خارج شوید.</a></span>");
+    echo ("<span class='warn'><a href='logout.php'>برای تکمیل بروزرسانی، یک‌بار از نمایه کاربری خارج شوید.</a></span>");
 } else {
     echo ("<span class='error'>خطایی در بروزرسانی اطلاعات رخ داد.</span>");
 }

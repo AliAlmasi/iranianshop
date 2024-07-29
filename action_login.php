@@ -20,8 +20,8 @@ $result = mysqli_fetch_array($request);
 if ($result) {
     $_SESSION["state_login"] = true;
     $_SESSION["realname"] = $result["realname"];
-	$_SESSION["username"] = $result["username"];
-	$_SESSION["email"] = $result["email"];
+    $_SESSION["username"] = $result["username"];
+    $_SESSION["email"] = $result["email"];
 
     if ($result["u_type"] == 0)
         $_SESSION["u_type"] = "nonadmin";
@@ -30,13 +30,13 @@ if ($result) {
         $_SESSION["u_type"] = "admin";
 
 
-    echo ("<span class='done'>کاربر گرامی {$result["realname"]} (با نام کاربری {$result["username"]}) <br> شما با موفقیت وارد حساب کاربری خود شدید.</span>");
+    echo ("<span class='done'>کاربر گرامی {$result["realname"]} (با نام کاربری {$result["username"]}) <br> شما با موفقیت وارد نمایه کاربری خود شدید.</span>");
 
     if ($_SESSION["u_type"] === "admin") {
         echo "<br><br><span class='warn'>شما یک مدیر هستید.</span>";
     }
 
-    echo "<br><br><a href='index.php'>به صفحه اصلی بروید <span style='font-weight:bold;font-size:22px'>&leftarrow;</span></a>";
+    include("includes/index_link.php");
 } else {
     echo ("<span class='error'>اطلاعات وارد شده صحیح نمی‌باشد.</span>");
 }

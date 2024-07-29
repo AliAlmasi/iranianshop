@@ -109,12 +109,12 @@ $request = mysqli_query($link, $query);
                         <tr>
                             <td style="width: 40%;">آدرس پستی گیرنده <span class="required">*</span></td>
                             <td style="width: 40%;">
-                                <textarea id="address" name="address" cols="30" rows="7" wrap="virtual"></textarea>
+                                <textarea id="address" name="address" cols="30" rows="4" wrap="virtual"></textarea>
                             </td>
                         </tr>
                         <tr>
                             <td><br><br><br><br></td>
-                            <td><input type="button" value="خرید محصول" onclick="check_input();"></td>
+                            <td><input type="button" value="خرید کالا" onclick="check_input();"></td>
                         </tr>
                     </table>
             </td>
@@ -138,7 +138,7 @@ $request = mysqli_query($link, $query);
                             if (validation)
                                 document.order.submit();
                             else
-                                alert('برخی از ورودی ها فرم سفارش محصول به درستی پر نشده اند.');
+                                alert('برخی از ورودی ها فرم سفارش کالا به درستی پر نشده اند.');
 
                         }
                     }

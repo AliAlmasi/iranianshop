@@ -33,13 +33,13 @@ if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] !== true) {
 		</tr>
 		<tr>
 			<td><br></td>
-			<td><input type='button' onclick='delete_user()' value='حدف حساب کاربری' style='color:red'></td>
+			<td><input type='button' onclick='delete_user()' value='حدف نمایه کاربری' style='color:red'></td>
 		</tr>
 	</table>
 </form>
 <script type="text/javascript">
 	function delete_user() {
-		if (confirm("آیا از حذف حساب کاربری خود مطمئن هستید؟"))
+		if (confirm("آیا از حذف نمایه کاربری خود مطمئن هستید؟"))
 			location.replace("action_delete_user.php");
 	}
 </script>

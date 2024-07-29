@@ -73,10 +73,10 @@ VALUES(
 $request = mysqli_query($link, $query);
 if ($request) {
     echo "<strong>کاربر گرامی $realname (با نام کاربری $username) سفارش شما:</strong><br>";
-    echo "<strong class='done'>محصول $pro_name با کد $pro_id به تعداد $pro_qty عدد</strong><br>";
+    echo "<strong class='done'>کالا $pro_name با کد $pro_id به تعداد $pro_qty عدد</strong><br>";
     echo "<span class='done'>با <strong>مبلغ قابل پرداخت $total تومان</strong> و با قیمت واحد $pro_price تومان</span><br>";
     echo "<span class='done'>برای شما ثبت سفارش شده است.</span><br><br>";
-    echo "<span class='done'>محصول به آدرس <br><br><strong>$address</strong><br><br> از طریق پست برای شما ارسال خواهد شد.</span><br><br>";
+    echo "<span class='done'>کالا به آدرس <br><br><strong>$address</strong><br><br> از طریق پست برای شما ارسال خواهد شد.</span><br><br>";
     echo "<span class='warn'>پس از بررسی و تائید سفارش، با شما تماس خواهیم گرفت.</span><br><br>";
     echo "<span class='warn'>در هنگام تحویل گرفتن مرسوله از مامور از سلامت آن اطمینان حاصل کنید و سپس مبلغ را طبق فاکتور به مامور پست تحویل دهید.</span>";
     $query = "UPDATE products SET qty=qty-'$pro_qty' WHERE id='$pro_id'";

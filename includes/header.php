@@ -1,4 +1,5 @@
 <?php
+$siteTitle = "فروشگاه ایرانیان";
 session_start();
 ?>
 
@@ -7,7 +8,11 @@ session_start();
 
 <head>
   <meta charset="UTF-8">
-  <title>فروشگاه ایرانیان</title>
+  <title><?php if (isset($title)) {
+            echo $title . " &ndash; " . $siteTitle;
+          } else {
+            echo $siteTitle;
+          } ?></title>
   <link rel="stylesheet" href="./style/style.css" type="text/css">
   <link rel="stylesheet" href="./style/global.css" type="text/css">
   <link rel="shortcut icon" href="./images/shir.svg" type="image/svg">
@@ -28,8 +33,7 @@ session_start();
             </div>
           </div>
         </header>
-
-        <nav class="divTable">
+        <nav class="divTable" style="text-align:center">
           <ul class="divTableRow">
             <li class="divTableCell"><a href="index.php">صفحه اصلی</a></li>
             <li class="divTableCell"><a href="register.php">عضویت در سایت</a></li>
@@ -47,14 +51,14 @@ session_start();
             if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
               if ($_SESSION["u_type"] === "admin") {
             ?>
-                <li class="divTableCell"><a href="edit_profile.php">مدیریت حساب</a></li>
-                <li class="divTableCell"><a href="admin_products.php">محصول جدید</a></li>
+                <li class="divTableCell"><a href="edit_profile.php">مدیریت نمایه</a></li>
+                <li class="divTableCell"><a href="admin_products.php">مدیریت کالاها</a></li>
               <?php
               }
 
               if ($_SESSION["u_type"] !== "admin") {
               ?>
-                <li class="divTableCell"><a href="edit_profile.php">مدیریت حساب کاربری</a></li>
+                <li class="divTableCell"><a href="edit_profile.php">مدیریت نمایه کاربری</a></li>
                 <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop" target="_blank">مخزن کد منبع</a></li>
               <?php
               }
@@ -68,9 +72,8 @@ session_start();
             }
             ?>
           </ul>
-
         </nav>
         <section class="divTable">
           <section class="divTableRow">
-            <aside class="divTableCell" style="width: 25%;">امکانات سایت</aside>
-            <section class="divTableCell" style="width: 75%;">
+            <aside class="divTableCell" style="width: 20%;"><?php include('includes/aside.php') ?></aside>
+            <section class="divTableCell" style="width: 80%;padding-right:20px;padding-bottom:20px">
