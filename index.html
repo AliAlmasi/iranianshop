@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>درباره این پروژه (فروشگاه ایرانیان)</title>
+    <title>فروشگاه ایرانیان</title>
     <style>
         @font-face {
             font-family: "Vazirmatn";
@@ -50,6 +50,20 @@
             border-top: 1px dashed #aaa;
             padding-top: 10px;
         }
+
+        #donation-pictures img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #donation-pictures {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            align-items: center;
+        }
     </style>
     <link rel="shortcut icon" href="./images/shir.svg" type="image/svg">
 </head>
@@ -85,6 +99,8 @@
     <p>خیلی راحت! <a href="https://github.com/AliAlmasi/iranianshop/archive/refs/heads/master.zip">این فایل zip رو
             دانلود کنین</a> و داخل فولدر www در مسیر نصب نرم‌افزار WAMP تون استخراجش کنین (extract اش کنین). بقیه‌ش هم
         که بلدین دیگه.</p>
+    <blockquote>نکته:<br>حواستون باشه فایل دیتابیس <code dir="ltr">.sql</code> هم داخل دیتابیس WAMP تون Import کنین.
+    </blockquote>
     <h2>فایل راهنما چیه داستانش؟</h2>
     <p><strong><a href="https://github.com/AliAlmasi/iranianshop/blob/master/guide.md">فایل راهنما</a></strong> بیشتر
         جنبه‌ی راهنمایی اجزا و کدهایی که در این پروژه استفاده شده رو داره. اگر جایی در حین خوندن کد ها، گیج شدین یا
@@ -97,7 +113,19 @@
     <p>دوستان اگه این کدها یا <strong><a href="https://github.com/AliAlmasi/iranianshop/blob/master/guide.md">فایل
                 راهنما</a></strong> کمکتون کرد یه قسمت از کتاب رو متوجه بشین، یا اگه تونستین باهاش نمره کار عملی‌تون رو
         بگیرین 😉، لطفا من رو هم با یه <strong><a href="http://donate.al1almasi.ir">دونیت (حمایت مالی)</a></strong>
-        خوشحال کنید.<br>ممنونم ازتون. 😁🤍</p>
+        خوشحال کنید.</p>
+    <p>خیلی از وب‌سایت ها، این پروژه رو بصورت <b>غیر رایگان</b> گذاشتن. من علاقه‌ای به گرفتن پول در ازای کاری که همه
+        میتونن بکنن ندارم، ولی اگه دونیت کنین، خیلی خیلی ممنون‌تون میشم. 🤍</p>
+    <div id="donation-pictures">
+        <img src="./images/Screenshot_28-7-2024_85233_wpfile.ir.jpeg"
+            onclick='location.replace("https://wpfile.ir/product/pudman5-tarahiweb-fani/");'>
+        <img src="./images/Screenshot_28-7-2024_85256_komakpajoo.ir.jpeg"
+            onclick='location.replace("https://komakpajoo.ir/product/iranianshop/");'>
+        <img src="./images/Screenshot_28-7-2024_85310_hoonarjo.ir.jpeg"
+            onclick='location.replace("https://hoonarjo.ir/product/%D9%BE%D8%B1%D9%88%DA%98%D9%87-%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C%D8%A7%D9%86/");'>
+        <img src="./images/Screenshot_28-7-2024_85343_gama.ir.jpeg"
+            onclick='location.replace("https://gama.ir/learnfiles/detail/7674/%D9%BE%D8%B1%D9%88%DA%98%D9%87-%D9%BE%D8%A7%DB%8C%D8%A7%D9%86%DB%8C-%D8%AF%D8%B1%D8%B3-%D9%BE%DB%8C%D8%A7%D8%AF%D9%87-%D8%B3%D8%A7%D8%B2%DB%8C-%D8%B3%DB%8C%D8%B3%D8%AA%D9%85%D9%87%D8%A7%DB%8C-%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA%DB%8C-%D9%88-%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%88%D8%A8-%DB%8C%D8%A7%D8%B2%D8%AF%D9%87%D9%85-%D8%B1%D8%B4%D8%AA%D9%87-%D8%B4%D8%A8%DA%A9%D9%87-%D9%88-%D9%86%D8%B1%D9%85-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1-%D8%B1%D8%A7%DB%8C%D8%A7%D9%86%D9%87-%D9%81%D8%B1%D9%88%D8%B4%DA%AF%D8%A7%D9%87-%D8%A8%D8%B1%D8%AE%D8%B7");'>
+    </div>
     <h2><a href="https://github.com/AliAlmasi/iranianshop/blob/master/guide.md">فایل راهنما</a></h2>
     <blockquote>
         <p>⚠️ <strong>یادآوری مهم</strong>:<br>این راهنما ها و توضیحات اصلا مطالب خوبی برای خوندن برای امتحانات
@@ -118,7 +146,6 @@
         پروژه، کد های این
         پروژه و فایل های
         راهنمای این پروژه <strong>تحت همین پروانه</strong> استفاده کنین.</p>
-
 </body>
 
 </html>
