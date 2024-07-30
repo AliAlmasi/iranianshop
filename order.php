@@ -92,13 +92,13 @@ $request = mysqli_query($link, $query);
                         <tr>
                             <td style="width: 40%;">نام خریدار</td>
                             <td style="width: 40%;">
-                                <input type="text" id="realname" name="realname" value="<?php echo $user_row['realname']; ?>" class="readonly">
+                                <input type="text" id="realname" name="realname" value="<?php echo $user_row['realname']; ?>" class="readonly" readonly>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 40%;">ایمیل</td>
                             <td style="width: 40%;">
-                                <input type="text" id="email" name="email" value="<?php echo $user_row['email']; ?>" class="ltr readonly">
+                                <input type="text" id="email" name="email" value="<?php echo $user_row['email']; ?>" class="ltr readonly" readonly>
                             </td>
                         </tr>
                         <tr>
