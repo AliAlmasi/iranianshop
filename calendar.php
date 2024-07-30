@@ -3,8 +3,20 @@
 <head>
 	<title>جدول فعالیت صفحه ۱۵۷</title>
 	<style>
+		@font-face {
+			font-family: "Vazirmatn";
+			src: url("fonts/Vazirmatn-Regular.woff2") format("woff2");
+			font-weight: 400;
+		}
+
+		@font-face {
+			font-family: "Vazirmatn";
+			src: url("fonts/Vazirmatn-Bold.woff2") format("woff2");
+			font-weight: 700;
+		}
+
 		body {
-			font-family: tahoma, sans-serif;
+			font-family: "Vazirmatn";
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -41,6 +53,16 @@
 		tbody {
 			color: darkred;
 		}
+
+		.next-month {
+			color: #999;
+		}
+
+		.next-month:hover {
+			background-color: white;
+			color: black;
+			font-weight: normal;
+		}
 	</style>
 </head>
 
@@ -49,7 +71,6 @@
 	<?php
 
 	$days = array("شنبه", "یک‌شنبه", "دوشنبه", "شه‌شنبه", "چهارشنبه", "پنج‌شنبه", "جمعه");
-	$months = array("فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند");
 	$titles = array(
 		"اول", "دوم", "سوم", "چهارم", "پنجم", "ششم", "هفتم", "هشتم", "نهم", "دهم",
 		"یازدهم", "دوازدهم", "سیزدهم", "چهاردهم", "پانزدهم", "شانزدهم", "هفدهم", "هجدهم", "نوزدهم", "بیستم",
@@ -75,9 +96,11 @@
 			echo "</tr><tr>";
 		}
 	}
+	$n = 1;
 	for ($i = 0; $i < $max_houses - 30; $i++) {
-		echo "<td title='شما دنبال چی هستی آقای فردوسی‌پور؟'>&nbsp;</td>";
+		echo "<td title='شما دنبال چی هستی آقای فردوسی‌پور؟' class='next-month'>$n</td>";
 		// این یک شوخی است
+		$n += 1;
 	}
 	echo "</tr></tbody></table>";
 

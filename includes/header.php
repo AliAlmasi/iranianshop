@@ -21,7 +21,7 @@ session_start();
 <body>
   <div class="divTable">
     <div class="divTableRow">
-      <div class="divTableCell">
+      <div class="divTableCell" style="padding:0;">
         <header class="divTable">
           <div class="divTableRow">
             <div class="divTableCell" id="siteInfo" style="cursor: pointer" onClick="location.replace('index.php');">
@@ -51,7 +51,7 @@ session_start();
             if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
               if ($_SESSION["u_type"] === "admin") {
             ?>
-                <li class="divTableCell"><a href="edit_profile.php">مدیریت نمایه</a></li>
+                <li class="divTableCell"><a href="edit_profile.php">مدیریت نمایه (مدیر)</a></li>
                 <li class="divTableCell"><a href="admin_products.php">مدیریت کالاها</a></li>
               <?php
               }
@@ -59,15 +59,13 @@ session_start();
               if ($_SESSION["u_type"] !== "admin") {
               ?>
                 <li class="divTableCell"><a href="edit_profile.php">مدیریت نمایه کاربری</a></li>
-                <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop" target="_blank">مخزن کد منبع</a></li>
+                <li class="divTableCell"><a href='contact_us.php'>ارتباط با ما</a></li>
               <?php
               }
             } else {
               ?>
-
+              <li class="divTableCell"><a href='contact_us.php'>ارتباط با ما</a></li>
               <li class="divTableCell"><a href="about.html" target="_blank">درباره ما</a></li>
-              <li class="divTableCell"><a href="http://github.com/alialmasi/iranianshop" target="_blank">مخزن کد منبع</a></li>
-
             <?php
             }
             ?>
@@ -75,5 +73,5 @@ session_start();
         </nav>
         <section class="divTable">
           <section class="divTableRow">
-            <aside class="divTableCell" style="width: 20%;"><?php include('includes/aside.php') ?></aside>
+            <aside class="divTableCell" style="width: 20%;vertical-align:top"><?php include('includes/aside.php') ?></aside>
             <section class="divTableCell" style="width: 80%;padding-right:20px;padding-bottom:20px">

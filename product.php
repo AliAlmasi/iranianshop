@@ -1,4 +1,5 @@
 <?php
+$title = "اطلاعات کالا";
 include("includes/header.php");
 include("includes/db_link.php");
 

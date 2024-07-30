@@ -1,4 +1,5 @@
 <?php
+$title = "حذف نمایه کاربری (نهایی)";
 include('./includes/header.php');
 
 if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] != true) {

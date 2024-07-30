@@ -1,4 +1,5 @@
 <?php
+$title = "بروزرسانی نمایه کاربری (نهایی)";
 include('./includes/header.php');
 
 if (

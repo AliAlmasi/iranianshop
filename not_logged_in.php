@@ -1,4 +1,5 @@
 <?php
+$title = "ورود به سایت لازم است";
 include('./includes/header.php');
 
 echo "<span class='error'>شما اجازه دسترسی به این صفحه را ندارید.</span><br>";

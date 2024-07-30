@@ -1,4 +1,5 @@
 <?php
+$title = "ورود به سایت (نهایی)";
 include('./includes/header.php');
 
 if (

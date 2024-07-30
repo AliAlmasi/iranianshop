@@ -1,4 +1,5 @@
 <?php
+$title = "عضویت در سایت (نهایی)";
 include('./includes/header.php');
 
 if (
@@ -32,11 +33,10 @@ $query = "INSERT INTO users (realname, username, password, email, u_type) VALUES
 
 if (mysqli_query($link, $query) === true) {
     echo ("<span class='done'>کاربر گرامی {$realname} (با نام کاربری {$username})<br>عضویت شما در فروشگاه با موفقیت انجام شد.</span>");
+    include('includes/index_link.php');
 } else {
     echo ("<span class='error'>عضویت شما در فروشگاه انجام نشد.</span>");
 }
 
-
 mysqli_close($link);
-
 include('./includes/footer.php');

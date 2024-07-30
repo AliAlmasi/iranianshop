@@ -1,4 +1,5 @@
 <?php
+$title = "بروزرسانی نمایه کاربری";
 include('./includes/header.php');
 
 if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] !== true) {
