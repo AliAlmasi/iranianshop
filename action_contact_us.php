@@ -19,6 +19,10 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
     exit("<span class='error'>پست اکترونیکی وارد شده صحیح نمیباشد.</span>");
 }
 
+if (strlen($content) > 500) {
+    exit("<span class='error'>متن پیام طولانی است.</span><br>لطفا در صورت امکان آن‌را کوتاه‌تر کنید، یا در چندین پیام متوالی آن‌را بنویسید.");
+}
+
 $query = "INSERT INTO `messages` (realname, email, content) VALUES
 ('$realname', '$email', '$content')";
 

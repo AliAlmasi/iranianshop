@@ -73,7 +73,7 @@ $query = "SELECT * FROM products";
 $request = mysqli_query($link, $query);
 ?>
 <table border="1px" cellpadding='5px' style="text-align:center;width:100%">
-	<thead>
+	<thead style="font-weight: 700">
 		<tr>
 			<td>کد کالا</td>
 			<td>نام کالا</td>

@@ -1,6 +1,11 @@
 <?php
 $title = "ارتباط با ما";
 include('includes/header.php');
+
+if ((isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true && $_SESSION["u_type"] === "admin")) {
+    exit("<span class='error'>شما یک کاربر مدیر هستید.<br>نمیتوانید برای خودتان پیام ارسال کنید.</span>");
+}
+
 $realname = "";
 $email = "";
 if (!empty($_SESSION["realname"]) && !empty($_SESSION["email"])) {
@@ -21,7 +26,7 @@ if (!empty($_SESSION["realname"]) && !empty($_SESSION["email"])) {
         </tr>
         <tr>
             <td>متن پیام <span class="required">*</span></td>
-            <td><textarea style="font-size:14px" id="content" name="content" cols="30" rows="7" wrap="virtual"></textarea></td>
+            <td><textarea style="font-size:14px;" id="content" name="content" cols="30" rows="7" wrap="virtual"></textarea></td>
         </tr>
         <tr>
             <td><br><br></td>

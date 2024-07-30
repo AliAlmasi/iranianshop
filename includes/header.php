@@ -74,4 +74,4 @@ session_start();
         <section class="divTable">
           <section class="divTableRow">
             <aside class="divTableCell" style="width: 20%;vertical-align:top"><?php include('includes/aside.php') ?></aside>
-            <section class="divTableCell" style="width: 80%;padding-right:20px;padding-bottom:20px">
+            <section class="divTableCell" style="width: 80%;padding-right:20px;padding-bottom:20px;padding-top:10px">
