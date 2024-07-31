@@ -4,7 +4,7 @@ session_start();
 
 function toman($number, $toman = false)
 {
-  return substr(number_format($number, 2, "", ","), 0, -2) . ($toman ? " تومان" : "");
+  return mb_substr(number_format($number, 2, "", ","), 0, -2) . ($toman ? " تومان" : "");
 }
 
 date_default_timezone_set("Asia/Tehran");

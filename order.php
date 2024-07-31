@@ -157,7 +157,7 @@ $request = mysqli_query($link, $query);
                             <br>
                             <span style="font-size: 14px; text-align: justify">توضیحات: <?php
                                                                                         $count = strlen($row['details']);
-                                                                                        echo (substr($row['details'], 0, (int)($count / 4)) . " ..."); ?></span>
+                                                                                        echo (mb_substr($row['details'], 0, (int)($count / 4)) . " ..."); ?></span>
                             <br><br>
                         </td>
                     </tr>

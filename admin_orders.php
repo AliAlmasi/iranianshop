@@ -46,7 +46,7 @@ $request = mysqli_query($link, $query);
 				<td><?= $row["pro_qty"] ?></td>
 				<td title="قیمت پایه: <?= toman($row["pro_price"], true) ?>"><?= toman($row["pro_price"] * $row["pro_qty"]) ?> <span title="تومان" style="font-size:16px;cursor:help">ت</span></td>
 				<td><?= $row["number"] ?></td>
-				<td dir='ltr' title='<?= $row["trackcode"] ?>'><?= substr($row["trackcode"], 0, 4) . "..." . substr($row["trackcode"], -6) ?></td>
+				<td dir='ltr' title='<?= $row["trackcode"] ?>'><?= mb_substr($row["trackcode"], 0, 4) . "..." . mb_substr($row["trackcode"], -6) ?></td>
 				<!-- states of order:
 				0 = order checking
 				1 = order ready to send
