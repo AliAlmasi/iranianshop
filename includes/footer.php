@@ -23,12 +23,6 @@
   let thistime = new Date().getHours().toLocaleString(locale).toString() + ":" +
     new Date().getMinutes().toLocaleString(locale).toString();
   document.getElementById('DateTime').textContent = `امروز ${today} ساعت ${thistime}`;
-  setInterval(() => {
-    today = new Date().toLocaleDateString(locale, options);
-    thistime = new Date().getHours().toLocaleString(locale).toString() + ":" +
-      new Date().getMinutes().toLocaleString(locale).toString();
-    document.getElementById('DateTime').textContent = `امروز ${today} ساعت ${thistime}`;
-  }, 5000);
 </script>
 </script>
 </body>

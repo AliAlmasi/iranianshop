@@ -14,15 +14,15 @@ if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] !== true) {
 	<table border="0" style="width: 50%;margin-left: auto;margin-right: auto;">
 		<tr>
 			<td style="width: 40%;">نام واقعی</td>
-			<td style="width: 60%;"><input type="text" id="realname" name="realname" value="<?php echo $_SESSION['realname']; ?>" title="فقط حروف فارسی" /></td>
+			<td style="width: 60%;"><input type="text" id="realname" name="realname" value="<?= $_SESSION['realname']; ?>" title="فقط حروف فارسی" /></td>
 		</tr>
 		<tr>
 			<td>نام کاربری</td>
-			<td><input type="text" id="username" name="username" value="<?php echo $_SESSION['username']; ?>" class="ltr" title="فقط حروف لاتین" /></td>
+			<td><input type="text" id="username" name="username" value="<?= $_SESSION['username']; ?>" class="ltr" title="فقط حروف لاتین" /></td>
 		</tr>
 		<tr>
 			<td>پست الکترونیکی</td>
-			<td><input type="text" id="email" name="email" value="<?php echo $_SESSION['email']; ?>" class="ltr" title="اعداد، علائم و حروف لاتین" /></td>
+			<td><input type="text" id="email" name="email" value="<?= $_SESSION['email']; ?>" class="ltr" title="اعداد، علائم و حروف لاتین" /></td>
 		</tr>
 		<tr>
 			<td><br><br></td>

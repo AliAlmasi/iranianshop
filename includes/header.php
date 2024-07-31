@@ -1,6 +1,13 @@
 <?php
 $siteTitle = "فروشگاه ایرانیان";
 session_start();
+
+function toman($number, $toman = false)
+{
+  return substr(number_format($number, 2, "", ","), 0, -2) . ($toman ? " تومان" : "");
+}
+
+date_default_timezone_set("Asia/Tehran");
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +48,7 @@ session_start();
             if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) { ?>
               <li class="divTableCell"><a href="logout.php">خروج از سایت
                   <span style="font-weight:normal">
-                    (<?php echo ($_SESSION["realname"]); ?>)
+                    (<?= ($_SESSION["realname"]); ?>)
                   </span></a></li>
             <?php } else {
             ?>

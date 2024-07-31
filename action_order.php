@@ -40,7 +40,9 @@ function random_digits($length)
 
 include("includes/db_link.php");
 
-$today = date('y-m-d');
+require_once("includes/PersianCalendar.php");
+$today = mds_date("Y/m/d");
+
 $random_code = random_digits(24);
 
 $query = "INSERT INTO `orders`(

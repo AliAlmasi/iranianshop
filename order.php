@@ -40,12 +40,12 @@ $request = mysqli_query($link, $query);
                         <tr>
                             <td style="width: 22%;">کد کالا</td>
                             <td style="width: 78%;"> <input type="text" id="id" name="id" value="
-<?php echo ($id); ?>" class="readonly" readonly> </td>
+<?= ($id); ?>" class="readonly" readonly> </td>
                         </tr>
                         <tr>
                             <td>نام کالا</td>
                             <td> <input type="text" id="name" name="name" value="
-<?php echo ($row['name']); ?>" class="readonly" readonly> </td>
+<?= ($row['name']); ?>" class="readonly" readonly> </td>
                         </tr>
                         <tr>
                             <td>تعداد سفارش <span class="required">*</span></td>
@@ -53,7 +53,7 @@ $request = mysqli_query($link, $query);
                         </tr>
                         <tr>
                             <td>قیمت واحد کالا</td>
-                            <td><input type="text" class="ltr readonly" id="price" name="price" value="<?php echo $row['price'];  ?>" readonly> تومان</td>
+                            <td><input type="text" class="ltr readonly" id="price" name="price" value="<?= $row['price'];  ?>" readonly> تومان</td>
                         </tr>
                         <tr>
                             <td>مبلغ قابل پرداخت <span class="required"> *</span></td>
@@ -64,7 +64,7 @@ $request = mysqli_query($link, $query);
                         <!--cal script-->
                         <script type="text/javascript">
                             function calc_price() {
-                                var qty = <?php echo $row['qty']; ?>;
+                                var qty = <?= $row['qty']; ?>;
                                 var price = document.getElementById('price').value;
                                 var count = document.getElementById('qty').value;
                                 if (count > qty) {
@@ -92,13 +92,13 @@ $request = mysqli_query($link, $query);
                         <tr>
                             <td style="width: 40%;">نام خریدار</td>
                             <td style="width: 40%;">
-                                <input type="text" id="realname" name="realname" value="<?php echo $user_row['realname']; ?>" class="readonly" readonly>
+                                <input type="text" id="realname" name="realname" value="<?= $user_row['realname']; ?>" class="readonly" readonly>
                             </td>
                         </tr>
                         <tr>
                             <td style="width: 40%;">ایمیل</td>
                             <td style="width: 40%;">
-                                <input type="text" id="email" name="email" value="<?php echo $user_row['email']; ?>" class="ltr readonly" readonly>
+                                <input type="text" id="email" name="email" value="<?= $user_row['email']; ?>" class="ltr readonly" readonly>
                             </td>
                         </tr>
                         <tr>
@@ -119,11 +119,10 @@ $request = mysqli_query($link, $query);
                         </tr>
                     </table>
             </td>
-            <td>
-                <!-- script -->
+            <td style="vertical-align:top;width:33%">
                 <script type="text/javascript">
                     function check_input() {
-                        var r = confirm("از اطلاعات وارد شده اطمینان دارید ؟");
+                        var r = confirm("از اطلاعات وارد شده اطمینان دارید؟");
                         if (r == true) {
                             var validation = true;
                             var count = document.getElementById('qty').value;
@@ -148,13 +147,13 @@ $request = mysqli_query($link, $query);
 
                 <table>
                     <tr>
-                        <td style="vertical-align:top;width:33%;">
-                            <h3 style="color:saddlebrown;margin: 10px 0;"> <?php echo $row['name']; ?> </h3>
-                            <img src="products/<?php echo $row['image']; ?>" width="250px" height="120px">
+                        <td>
+                            <h3 style="color:saddlebrown;margin: 10px 0;"> <?= $row['name']; ?> </h3>
+                            <img src="products/<?= $row['image']; ?>" width="250px" height="120px">
                             <br>
-                            <span>قیمت: <?php echo substr(number_format($row["price"], 2, "", ","), 0, -2); ?> تومان</span>
+                            <span>قیمت: <?= toman($row["price"], true) ?></span>
                             <br>
-                            <span>تعداد موجودی: <?php echo ($row['qty']); ?></span>
+                            <span>تعداد موجودی: <?= $row['qty'] ?></span>
                             <br>
                             <span style="font-size: 14px; text-align: justify">توضیحات: <?php
                                                                                         $count = strlen($row['details']);

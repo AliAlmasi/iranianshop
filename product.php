@@ -27,14 +27,14 @@ $request = mysqli_query($link, $query);
         if ($row = mysqli_fetch_array($request)) {
         ?>
             <td style="vertical-align: top; width: 100%; display:flex;flex-direction: column">
-                <h2 style='color:saddlebrown;align-self: center'><?php echo $row["name"]; ?></h2>
-                <img src='products/<?php echo $row["image"]; ?>' style="align-self: center">
+                <h2 style='color:saddlebrown;align-self: center'><?= $row["name"]; ?></h2>
+                <img src='products/<?= $row["image"]; ?>' style="align-self: center">
                 <br>
-                <span style='font-size:18px'>قیمت: <?php echo substr(number_format($row["price"], 2, "", ","), 0, -2); ?> تومان</span> <br>
-                <span style='font-size:18px'>موجودی: <?php echo $row["qty"]; ?> </span> <br>
-                <span style="font-size: 14px; text-align: justify">توضیحات: <?php echo $row["details"]; ?> </span> <br>
+                <span style='font-size:18px'>قیمت: <?= toman($row["price"], true); ?></span> <br>
+                <span style='font-size:18px'>موجودی: <?= $row["qty"]; ?> </span> <br>
+                <span style="font-size: 14px; text-align: justify">توضیحات: <?= $row["details"]; ?> </span> <br>
                 <br>
-                <strong><a href='order.php?id=<?php echo $row["id"]; ?>'>سفارش این کالا &leftarrow;</a></strong>
+                <strong><a href='order.php?id=<?= $row["id"]; ?>'>سفارش این کالا &leftarrow;</a></strong>
             </td>
             </td>
         <?php

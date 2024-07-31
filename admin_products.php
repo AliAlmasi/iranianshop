@@ -34,7 +34,7 @@ if (isset($_GET['action']) && $_GET['action'] == "EDIT") {
 ?>
 <h2>افزودن کالای جدید</h2>
 <form name='add_product' action='action_admin_products.php<?php if (!empty($url)) echo $url ?>' method='post' enctype="multipart/form-data">
-	<table border="0" style="width:100%;margin:0 auto;">
+	<table border=0 style="width:100%;margin:0 auto" cellspacing=0>
 		<tr>
 			<td style='width:22%'>کد کالا <span class="required">*</span></td>
 			<td style='width:78%'><input type="text" id="id" name="id" class="ltr" value="<?= $id ?>"></td>

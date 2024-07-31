@@ -12,15 +12,15 @@ $request = mysqli_query($link, $query);
         while ($row = mysqli_fetch_array($request)) {
             $counter++;
         ?>
-            <td style='border:1px solid #999;vertical-align:top;width:33%;'><a href="product.php?id=<?php echo $row["id"]; ?>">
-                    <h4 style='color:saddlebrown;text-align:center;margin:10px 0'><?php echo $row["name"]; ?></h4>
-                    <img src='products/<?php echo $row["image"]; ?>' width="250px" height="150px">
+            <td style='border:1px solid #999;vertical-align:top;width:33%;'><a href="product.php?id=<?= $row["id"]; ?>">
+                    <h4 style='color:saddlebrown;text-align:center;margin:10px 0'><?= $row["name"]; ?></h4>
+                    <img src='products/<?= $row["image"]; ?>' width="250px" height="150px">
                 </a> <br>
-                <span>قیمت: <?php echo substr(number_format($row["price"], 2, "", ","), 0, -2); ?> تومان</span> <br>
-                <span>موجودی: <?php echo $row["qty"]; ?> </span> <br>
-                <span style="font-size: 14px">توضیحات: <?php echo substr($row["details"], 0, 100) . "..."; ?> </span> <br>
+                <span>قیمت: <?= toman($row["price"], true); ?></span> <br>
+                <span>موجودی: <?= $row["qty"]; ?> </span> <br>
+                <span style="font-size: 14px">توضیحات: <?= substr($row["details"], 0, 100) . "..."; ?> </span> <br>
                 <br>
-                <strong><a href='product.php?id=<?php echo $row["id"]; ?>'>ادامه توضیحات و خرید &leftarrow;</a></strong>
+                <strong><a href='product.php?id=<?= $row["id"]; ?>'>ادامه توضیحات و خرید &leftarrow;</a></strong>
             </td>
         <?php
             if ($counter % 3 == 0) {
