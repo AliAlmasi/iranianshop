@@ -26,8 +26,8 @@ $request = mysqli_query($link, $query);
 			<td>کد سفارش</td>
 			<td>نام کاربری مشتری</td>
 			<td>تاریخ سفارش</td>
-			<td>کد محصول سفارش</td>
-			<td>تعداد سفارش محصول</td>
+			<td>کد کالای سفارش</td>
+			<td>تعداد سفارش کالا</td>
 			<td>قابل پرداخت</td>
 			<td>شماره تماس مشتری</td>
 			<td>کد پیگیری پست</td>
@@ -42,11 +42,16 @@ $request = mysqli_query($link, $query);
 				<td><?= $row["id"] ?></td>
 				<td><?= $row["username"] ?></td>
 				<td><?= $row["orderdate"] ?></td>
-				<td><a href="product.php?id=<?= $row["pro_id"] ?>" target="_blank"><?= $row["pro_id"] ?></a></td>
+				<td><a href="product.php?id=<?= $row["pro_id"] ?>" target="_blank">
+						<?= $row["pro_id"] ?></a></td>
 				<td><?= $row["pro_qty"] ?></td>
-				<td title="قیمت پایه: <?= toman($row["pro_price"], true) ?>"><?= toman($row["pro_price"] * $row["pro_qty"]) ?> <span title="تومان" style="font-size:16px;cursor:help">ت</span></td>
+				<td title="قیمت پایه: <?= toman($row["pro_price"], true) ?>" style="cursor:help">
+					<?= toman($row["pro_price"] * $row["pro_qty"]) ?>
+					<span title="تومان" style="font-size:16px">ت</span>
+				</td>
 				<td><?= $row["number"] ?></td>
-				<td dir='ltr' title='<?= $row["trackcode"] ?>'><?= mb_substr($row["trackcode"], 0, 4) . "..." . mb_substr($row["trackcode"], -6) ?></td>
+				<td dir='ltr' style="cursor:pointer" title='<?= $row["trackcode"] ?>' onclick="copy(`<?= $row['trackcode'] ?>`)">
+					<?= mb_substr($row["trackcode"], 0, 4) . "..." . mb_substr($row["trackcode"], -6) ?></td>
 				<!-- states of order:
 				0 = order checking
 				1 = order ready to send
@@ -74,5 +79,11 @@ $request = mysqli_query($link, $query);
 		}
 		?>
 </table>
+<script type="text/javascript">
+	function copy(string) {
+		navigator.clipboard.writeText(string);
+		window.alert("کد پیگیری کپی شد.\n" + string);
+	}
+</script>
 <?php
 include("./includes/footer.php");

@@ -45,11 +45,11 @@ $order = mysqli_fetch_array($request);
             <td><span><?= $order['orderdate'] ?></span></td>
         </tr>
         <tr>
-            <td>کد محصول سفارش</td>
+            <td>کد کالای سفارش</td>
             <td><span><?= $order['pro_id'] ?></span></td>
         </tr>
         <tr>
-            <td>تعداد سفارش محصول</td>
+            <td>تعداد سفارش کالا</td>
             <td><span><?= $order['pro_qty'] ?></span></td>
         </tr>
         <tr>
