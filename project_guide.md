@@ -11,7 +11,7 @@
   `username` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `u_type` int(1) NOT NULL,
+  `user_type` int(1) NOT NULL,
   PRIMARY KEY (`username`)
 ```
 

@@ -24,16 +24,16 @@ if ($result) {
     $_SESSION["username"] = $result["username"];
     $_SESSION["email"] = $result["email"];
 
-    if ($result["u_type"] == 0)
-        $_SESSION["u_type"] = "nonadmin";
+    if ($result["user_type"] == 0)
+        $_SESSION["user_type"] = "nonadmin";
 
-    elseif ($result["u_type"] == 1)
-        $_SESSION["u_type"] = "admin";
+    elseif ($result["user_type"] == 1)
+        $_SESSION["user_type"] = "admin";
 
 
     echo ("<span class='done'>کاربر گرامی {$result["realname"]} (با نام کاربری {$result["username"]}) <br> شما با موفقیت وارد نمایه کاربری خود شدید.</span>");
 
-    if ($_SESSION["u_type"] === "admin") {
+    if ($_SESSION["user_type"] === "admin") {
         echo "<br><br><span class='warn'>شما یک مدیر هستید.</span>";
     }
 

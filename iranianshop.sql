@@ -80,13 +80,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(30) NOT NULL COMMENT 'نام کاربری',
   `password` varchar(30) NOT NULL COMMENT 'رمز عبور',
   `email` varchar(50) NOT NULL COMMENT 'پست الکترونیک',
-  `u_type` int(1) NOT NULL COMMENT 'نوع کاربر',
+  `user_type` int(1) NOT NULL COMMENT 'نوع کاربر',
   PRIMARY KEY (`username`),
   KEY `username` (`username`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci COMMENT='جدول کاربران';
 
 TRUNCATE TABLE `users`;
-INSERT INTO `users` (`realname`, `username`, `password`, `email`, `u_type`) VALUES
+INSERT INTO `users` (`realname`, `username`, `password`, `email`, `user_type`) VALUES
 ('admin', 'admin', 'admin', 'admin@iranianshop.ir', 1),
 ('Ø¹Ù„ÛŒ Ø§Ù„Ù…Ø§Ø³ÛŒ', 'almasi', 'almasi', 'a710almasi@gmail.com', 0),
 ('Ø§Ø±Ø³Ù„Ø§Ù† Ø§Ù„Ù…Ø§Ø³ÛŒ', 'arsalan', 'almasi', 'arsalan@almasi.ir', 0);

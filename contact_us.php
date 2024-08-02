@@ -2,7 +2,7 @@
 $title = "ارتباط با ما";
 include('includes/header.php');
 
-if ((isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true && $_SESSION["u_type"] === "admin")) {
+if ((isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true && $_SESSION["user_type"] === "admin")) {
     exit("<span class='error'>شما یک کاربر مدیر هستید.<br>نمیتوانید برای خودتان پیام ارسال کنید.</span>");
 }
 

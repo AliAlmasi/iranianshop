@@ -3,7 +3,7 @@ $title = "مدیریت سفارش";
 include("includes/header.php");
 require_once("includes/PersianCalendar.php");
 
-if ((isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true && $_SESSION["u_type"] === "nonadmin") ||
+if ((isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true && $_SESSION["user_type"] === "nonadmin") ||
     !isset($_SESSION["state_login"])
 ) {
 ?>

@@ -7,6 +7,21 @@ function toman($number, $toman = false)
   return mb_substr(number_format($number, 2, "", ","), 0, -2) . ($toman ? " تومان" : "");
 }
 
+function trackcode($string)
+{
+  return mb_substr($string, 0, 4) . "..." . mb_substr($string, -6);
+}
+
+function details($string, $length = null)
+{
+  if ($length == null) {
+    $count = strlen($string);
+    return (mb_substr($string, 0, (int)($count / 4)) . "...");
+  } else if ($length > 1) {
+    return (mb_substr($string, 0, $length) . "...");
+  } else exit("<span class='error'>خطا در تابع details (در فایل includes/header.php)</span>)");
+}
+
 date_default_timezone_set("Asia/Tehran");
 ?>
 
@@ -42,7 +57,7 @@ date_default_timezone_set("Asia/Tehran");
         </header>
         <nav class="divTable" style="text-align:center">
           <ul class="divTableRow">
-            <li class="divTableCell"><a href="index.php">صفحه اصلی</a></li>
+            <li class="divTableCell"><a href="index.php">صفحهٔ اصلی</a></li>
             <li class="divTableCell"><a href="register.php">عضویت در سایت</a></li>
             <?php
             if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) { ?>
@@ -56,22 +71,22 @@ date_default_timezone_set("Asia/Tehran");
             <?php } ?>
             <?php
             if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
-              if ($_SESSION["u_type"] === "admin") {
+              if ($_SESSION["user_type"] === "admin") {
             ?>
                 <li class="divTableCell"><a href="edit_profile.php">مدیریت نمایه (مدیر)</a></li>
                 <li class="divTableCell"><a href="admin_products.php">مدیریت کالاها</a></li>
               <?php
               }
 
-              if ($_SESSION["u_type"] !== "admin") {
+              if ($_SESSION["user_type"] !== "admin") {
               ?>
-                <li class="divTableCell"><a href="edit_profile.php">مدیریت نمایه کاربری</a></li>
-                <li class="divTableCell"><a href='contact_us.php'>ارتباط با ما</a></li>
+                <li class="divTableCell"><a href='orders.php'>تاریخچهٔ سفارشات شما</a></li>
+                <li class="divTableCell"><a href="edit_profile.php">مدیریت نمایهٔ کاربری</a></li>
               <?php
               }
             } else {
               ?>
-              <li class="divTableCell"><a href='contact_us.php'>ارتباط با ما</a></li>
+              <li class="divTableCell"><a href='https://al1almasi.ir'>وب‌سایت طراح</a></li>
               <li class="divTableCell"><a href="about.html" target="_blank">درباره ما</a></li>
             <?php
             }

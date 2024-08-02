@@ -1,5 +1,5 @@
 <?php
-if (isset($_SESSION['state_login']) && $_SESSION['state_login'] && $_SESSION['u_type'] == "admin") {
+if (isset($_SESSION['state_login']) && $_SESSION['state_login'] && $_SESSION['user_type'] == "admin") {
     echo "<h4>پیوند های مدیر</h4>";
     echo "<ul style='list-style:square;font-weight:700'>";
     echo "<li><a href='admin_orders.php'>سفارشات کاربران</a></li>";
@@ -9,7 +9,8 @@ if (isset($_SESSION['state_login']) && $_SESSION['state_login'] && $_SESSION['u_
 }
 echo "<strong>";
 echo "<ul style='list-style:square'>";
+echo "<li><a href='contact_us.php'>ارتباط با ما</a></li>";
 echo "<li><a href='http://github.com/alialmasi/iranianshop' target='_blank'>مخزن کد منبع</a></li>";
-echo "<li><a href='https://parchlinux.com'>پارچ لینوکس</a></li>";
+echo "<li><a href='http://parchlinux.com'>پارچ لینوکس</a></li>";
 echo "</ul>";
 echo "</strong>";

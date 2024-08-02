@@ -3,7 +3,7 @@ $title = "مدیریت سفارشات";
 include("includes/header.php");
 require_once("includes/PersianCalendar.php");
 
-if ((isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true && $_SESSION["u_type"] === "nonadmin") ||
+if ((isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true && $_SESSION["user_type"] === "nonadmin") ||
 	!isset($_SESSION["state_login"])
 ) {
 ?>
@@ -51,7 +51,7 @@ $request = mysqli_query($link, $query);
 				</td>
 				<td><?= $row["number"] ?></td>
 				<td dir='ltr' style="cursor:pointer" title='<?= $row["trackcode"] ?>' onclick="copy(`<?= $row['trackcode'] ?>`)">
-					<?= mb_substr($row["trackcode"], 0, 4) . "..." . mb_substr($row["trackcode"], -6) ?></td>
+					<?= trackcode($row["trackcode"]); ?></td>
 				<!-- states of order:
 				0 = order checking
 				1 = order ready to send

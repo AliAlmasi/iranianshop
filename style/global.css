@@ -55,6 +55,19 @@ input[type='button'] {
 	content: " ❌";
 }
 
+.error.code {
+	direction: ltr;
+	float: left;
+	font-family: monospace;
+	background-color: black;
+	padding: 5px;
+	width: fit-content;
+}
+
+.error.code::after {
+	content: none;
+}
+
 .done {
 	color: darkgreen;
 }

@@ -155,9 +155,8 @@ $request = mysqli_query($link, $query);
                             <br>
                             <span>تعداد موجودی: <?= $row['qty'] ?></span>
                             <br>
-                            <span style="font-size: 14px; text-align: justify">توضیحات: <?php
-                                                                                        $count = strlen($row['details']);
-                                                                                        echo (mb_substr($row['details'], 0, (int)($count / 4)) . " ..."); ?></span>
+                            <span style="font-size: 14px; text-align: justify">توضیحات:
+                                <?= details($row['details']) ?></span>
                             <br><br>
                         </td>
                     </tr>

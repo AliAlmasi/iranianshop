@@ -18,7 +18,7 @@ $request = mysqli_query($link, $query);
                 </a> <br>
                 <span>قیمت: <?= toman($row["price"], true); ?></span> <br>
                 <span>موجودی: <?= $row["qty"]; ?> </span> <br>
-                <span style="font-size: 14px">توضیحات: <?= mb_substr($row["details"], 0, 100) . "..."; ?> </span> <br>
+                <span style="font-size: 14px">توضیحات: <?= details($row['details'], 100) ?> </span> <br>
                 <br>
                 <strong><a href='product.php?id=<?= $row["id"]; ?>'>ادامه توضیحات و خرید &leftarrow;</a></strong>
             </td>

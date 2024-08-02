@@ -28,7 +28,7 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
 
 include("./includes/db_link.php");
 
-$query = "INSERT INTO users (realname, username, password, email, u_type) VALUES
+$query = "INSERT INTO users (realname, username, password, email, user_type) VALUES
 ('$realname', '$username', '$password', '$email', 0)";
 
 if (mysqli_query($link, $query) === true) {
