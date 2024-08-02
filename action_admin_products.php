@@ -32,9 +32,10 @@ if (
 } else {
 	if (isset($_GET['action']) && $_GET['action'] == "DELETE") {
 		$id = $_GET['id'];
-		$imagefile = mysqli_fetch_row(mysqli_query($link, "SELECT `image` FROM `products` WHERE `id`='$id'"))[0];
+		$imagefile = strval(mysqli_fetch_array(mysqli_query($link, "SELECT * FROM `products` WHERE `id`='$id'"))["image"]);
 		$query = "DELETE FROM `products` WHERE `id`='$id'";
-		if (mysqli_query($link, $query) && unlink("products/$imagefile")) {
+		if (mysqli_query($link, $query)) {
+			delete("products/$imagefile");
 			echo "<span class='done'>کالا با موفقیت حذف شد.</span>";
 			include("includes/index_link.php");
 		} else

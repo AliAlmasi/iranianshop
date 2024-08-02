@@ -22,6 +22,19 @@ function details($string, $length = null)
   } else exit("<span class='error'>خطا در تابع details (در فایل includes/header.php)</span>)");
 }
 
+function delete($filename)
+{
+  if (is_link($filename)) {
+    $sym = @readlink($filename);
+    if ($sym) return is_writable($filename) && @unlink($filename);
+  }
+
+  if (realpath($filename) && realpath($filename) !== $filename)
+    return is_writable($filename) && @unlink(realpath($filename));
+
+  return is_writable($filename) && @unlink($filename);
+}
+
 date_default_timezone_set("Asia/Tehran");
 ?>
 
