@@ -21,7 +21,7 @@
 				color: white;
 				font-size: 17px;
 				font-family: "Vazirmatn";
-				width: 60svw;
+				width: 70svw;
 				margin: 0 auto;
 			}
 
@@ -37,7 +37,7 @@
 
 			blockquote {
 				margin: 20px 0;
-				padding: 10px;
+				padding: 5px 20px;
 				border: 1px solid #aaa;
 				border-right: 10px solid #aaa;
 				background-color: #2a2a2a;
@@ -54,6 +54,12 @@
 				max-width: 100%;
 				height: auto;
 				cursor: pointer;
+				filter: saturate(0.5);
+				transition: filter 0.1s;
+			}
+
+			#donation-pictures img:hover {
+				filter: contrast(0.7);
 			}
 
 			#donation-pictures {
@@ -68,8 +74,16 @@
 	</head>
 
 	<body>
-		<div align="center">
-			<h1 style="margin-bottom: 0">درباره این پروژه (فروشگاه ایرانیان)</h1>
+		<div
+			align="center"
+			style="
+				display: flex;
+				gap: 20px;
+				justify-content: center;
+				align-items: center;
+				margin-top: 20px;
+			"
+		>
 			<img
 				src="./images/shir.svg"
 				alt="Logo"
@@ -77,6 +91,7 @@
 				title="شیر و خورشید یکی از نماد های ایرانیان است."
 				width="100px"
 			/>
+			<h1 style="margin-bottom: 0">فروشگاه ایرانیان</h1>
 		</div>
 		<blockquote>
 			<p>
@@ -84,6 +99,13 @@
 				هنوز کامل نشده!
 			</p>
 		</blockquote>
+		<img
+			src="./images/iranianshop.jpg"
+			alt="iranianshop"
+			width="950"
+			height="400"
+			style="max-width: 100%; min-width: 100%; height: fit-content"
+		/>
 		<p>
 			این پروژه دقیقا همون پروژه‌ای هست که
 			<a href="http://www.chap.sch.ir/books/12532"
@@ -122,15 +144,19 @@
 		<p>
 			خیلی راحت!
 			<a
-				href="https://github.com/AliAlmasi/iranianshop/archive/refs/heads/master.zip"
+				href="https://github.com/AliAlmasi/iranianshop/releases/download/latest/iranianshop.zip"
 				>این فایل zip رو دانلود کنین</a
 			>
 			و داخل فولدر www در مسیر نصب نرم‌افزار WAMP تون استخراجش کنین (extract اش
 			کنین). بقیه‌ش هم که بلدین دیگه.
 		</p>
+		<p>
+			اگر هم از XAMPP استفاده میکنین، داخل پوشه htdocs در مسیر نصب XAMPP تون
+			اکسترکت‌اش کنین.
+		</p>
 		<blockquote>
 			نکته:<br />حواستون باشه فایل دیتابیس <code dir="ltr">.sql</code> هم داخل
-			دیتابیس WAMP تون Import کنین.
+			دیتابیس MySQL تون Import کنین.
 		</blockquote>
 		<h2>فایل راهنما چیه داستانش؟</h2>
 		<p>
