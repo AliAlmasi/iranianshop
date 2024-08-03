@@ -1,7 +1,7 @@
-<p align="center">از لینک های زیر برای باز کردن هر کدوم از فایل های راهنما که میخواید استفاده کنید
+<p align="center" dir="rtl">از لینک های زیر برای باز کردن هر کدوم از فایل های راهنما که میخواید استفاده کنید
 </p>
 
-<table border="2" align="center">
+<table border="2" align="center" dir="rtl">
 <td align="center"><a href="./guide.md"> راهنمای کلی (جزوه)</a></td>
 <td align="center"><a href="./project_guide.md">راهنمای کدهای پروژه</a></td>
 </tr>
