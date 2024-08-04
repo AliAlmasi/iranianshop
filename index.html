@@ -2,6 +2,19 @@
 <html lang="fa-IR" dir="rtl">
 	<head>
 		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=7" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Ali Almasi" />
+		<meta
+			name="description"
+			content="فروشگاه ایرانیان - از صفحه ۱۶۲ کتاب طراحی وب یازدهم هنرستان کامپیوتر تا آخر کتاب"
+		/>
+		<meta
+			name="keywords"
+			content="iranianshop, فروشگاه ایرانیان, هنرستان, یازدهم, طراحی وب, شبکه و نرم افزار, فنی و حرفه ای, وب, دیتابیس, PHP, MySQL, SQL, HTML, CSS, JS, Javascript"
+		/>
 		<title>فروشگاه ایرانیان</title>
 		<style>
 			@font-face {
@@ -50,6 +63,14 @@
 				padding-top: 10px;
 			}
 
+			#header {
+				display: flex;
+				gap: 20px;
+				justify-content: center;
+				align-items: center;
+				margin-top: 20px;
+			}
+
 			#donation-pictures img {
 				max-width: 100%;
 				height: auto;
@@ -75,22 +96,14 @@
 	</head>
 
 	<body>
-		<div
-			align="center"
-			style="
-				display: flex;
-				gap: 20px;
-				justify-content: center;
-				align-items: center;
-				margin-top: 20px;
-			"
-		>
+		<div align="center" id="header">
 			<img
 				src="./images/shir.svg"
 				alt="Logo"
 				id="siteLogo"
 				title="شیر و خورشید یکی از نماد های ایرانیان است."
 				width="100px"
+				loading="lazy"
 			/>
 			<h1 style="margin-bottom: 0">فروشگاه ایرانیان</h1>
 		</div>
@@ -100,13 +113,6 @@
 				کد های این پروژه تکمیل شده ولی فایل های راهنما هنوز تکمیل نشده.
 			</p>
 		</blockquote>
-		<img
-			src="./images/iranianshop.jpg"
-			alt="iranianshop"
-			width="950"
-			height="400"
-			style="max-width: 100%; min-width: 100%; height: fit-content"
-		/>
 		<p>
 			این پروژه دقیقا همون پروژه‌ای هست که
 			<a href="http://www.chap.sch.ir/books/12532"
@@ -124,11 +130,19 @@
 			این پروژه در کنار تدریس کتاب جلو رفته و اکثر مطالبی که در کتاب درسی گفته
 			شده، بطور همزمان در این پروژه هم بکار گرفته شده و وجود داره. 🌱
 		</p>
-		<strong
-			>در کنار همه اینها، من دوتا فایل راهنما تو این مخزن کنار کد های این پروژه
-			میذارم:
-		</strong>
-
+		<img
+			src="./images/iranianshop.jpg"
+			alt="iranianshop"
+			width="950"
+			height="400"
+			style="max-width: 100%; min-width: 100%; height: fit-content"
+		/>
+		<p>
+			<strong
+				>در کنار همه اینها، من دوتا فایل راهنما تو این مخزن کنار کد های این
+				پروژه میذارم:
+			</strong>
+		</p>
 		<p>
 			یکیش
 			<a href="https://github.com/AliAlmasi/iranianshop/blob/guides/guide.md"
