@@ -99,8 +99,8 @@ date_default_timezone_set("Asia/Tehran");
               }
             } else {
               ?>
-              <li class="divTableCell"><a href='https://al1almasi.ir'>وب‌سایت طراح</a></li>
               <li class="divTableCell"><a href="about.html" target="_blank">درباره ما</a></li>
+              <li class="divTableCell"><a href='http://donate.al1almasi.ir/' target="_blank">حمایت از ما</a></li>
             <?php
             }
             ?>
