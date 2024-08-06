@@ -2,11 +2,7 @@
 </p>
 
 <table border="2" align="center" dir="rtl">
-<td align="center"><a href="./guide.md"> راهنمای کلی (جزوه)</a></td>
-<td align="center"><a href="./project_guide.md">راهنمای کدهای پروژه</a></td>
-</tr>
-<tr>
-<td align="center"><a href="https://al1almasi.ir/iranianshop">دربارهٔ فروشگاه ایرانیان</a></td>
-<td align="center"><a href="https://al1almasi.ir">طراح پروژه</a></td>
+<td align="center"><a href="./guide.md"><b>راهنمای کلی (جزوه)</b></a></td>
+<td align="center"><a href="./project_guide.md"><b>راهنمای کدهای پروژه</b></a></td>
 </tr>
 </table>
