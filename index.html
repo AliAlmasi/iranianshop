@@ -16,83 +16,8 @@
 			content="iranianshop, فروشگاه ایرانیان, هنرستان, یازدهم, طراحی وب, شبکه و نرم افزار, فنی و حرفه ای, وب, دیتابیس, PHP, MySQL, SQL, HTML, CSS, JS, Javascript"
 		/>
 		<title>فروشگاه ایرانیان</title>
-		<style>
-			@font-face {
-				font-family: "Vazirmatn";
-				src: url("./fonts/Vazirmatn-Regular.woff2") format("woff2");
-				font-weight: 400;
-			}
-
-			@font-face {
-				font-family: "Vazirmatn";
-				src: url("./fonts/Vazirmatn-Bold.woff2") format("woff2");
-				font-weight: 700;
-			}
-
-			body {
-				background-color: #1a1a1a;
-				color: white;
-				font-size: 17px;
-				font-family: "Vazirmatn";
-				width: 70svw;
-				margin: 0 auto;
-			}
-
-			a:link,
-			a:visited {
-				color: #4493f8;
-				text-decoration: none;
-			}
-
-			a:hover {
-				text-decoration: underline dotted;
-			}
-
-			blockquote {
-				margin: 20px 0;
-				padding: 5px 20px;
-				border: 1px solid #aaa;
-				border-right: 10px solid #aaa;
-				background-color: #2a2a2a;
-			}
-
-			h2 {
-				text-align: center;
-				margin: 0;
-				border-top: 1px dashed #aaa;
-				padding-top: 10px;
-			}
-
-			#header {
-				display: flex;
-				gap: 20px;
-				justify-content: center;
-				align-items: center;
-				margin-top: 20px;
-			}
-
-			#donation-pictures img {
-				max-width: 100%;
-				height: auto;
-				cursor: pointer;
-				filter: saturate(0.5);
-				transition: filter 0.1s;
-			}
-
-			#donation-pictures img:hover {
-				filter: contrast(0.7);
-			}
-
-			#donation-pictures {
-				display: grid;
-				grid-template-columns: repeat(2, 1fr);
-				grid-template-rows: repeat(2, 1fr);
-				gap: 10px;
-				align-items: center;
-				justify-items: center;
-			}
-		</style>
 		<link rel="shortcut icon" href="./images/shir.svg" type="image/svg" />
+		<link rel="stylesheet" href="./style.css" />
 	</head>
 
 	<body>
@@ -139,12 +64,12 @@
 		</p>
 		<p>
 			یکیش
-			<a href="https://github.com/AliAlmasi/iranianshop/blob/guides/guide.md"
+			<a href="http://github.com/AliAlmasi/iranianshop/blob/guides/guide.md"
 				>راهنمای کلی</a
 			>
 			هستش (یه چیزی حالت جزوه مختصر و مفید از کتاب با زبون خودمونی) و اون یکیش
 			<a
-				href="https://github.com/AliAlmasi/iranianshop/blob/guides/project_guide.md"
+				href="http://github.com/AliAlmasi/iranianshop/blob/guides/project_guide.md"
 				>راهنمای کد های این پروژه</a
 			>
 			هست (کد هایی که ممکنه براتون سوال ایجاد کنه یا داخل کتاب گفته نشده)
@@ -153,7 +78,7 @@
 		<p>
 			خیلی راحت!
 			<a
-				href="https://github.com/AliAlmasi/iranianshop/archive/refs/heads/master.zip"
+				href="http://github.com/AliAlmasi/iranianshop/archive/refs/heads/master.zip"
 				>این فایل zip رو دانلود کنین</a
 			>
 			و داخل فولدر www در مسیر نصب نرم‌افزار WAMP تون استخراجش کنین (extract اش
@@ -172,7 +97,7 @@
 		<h2>فایل راهنما چیه داستانش؟</h2>
 		<p>
 			<strong
-				><a href="https://github.com/AliAlmasi/iranianshop/tree/guides#readme"
+				><a href="http://github.com/AliAlmasi/iranianshop/tree/guides#readme"
 					>فایل راهنما</a
 				></strong
 			>
@@ -198,11 +123,11 @@
 				کد های این پروژه تکمیل شده ولی فایل های راهنما هنوز تکمیل نشده.
 			</p>
 		</blockquote>
-		<h2>حمایت از نویسنده</h2>
+		<h2>حمایت از سازنده این پروژه</h2>
 		<p>
 			دوستان اگه این کدها یا
 			<strong
-				><a href="https://github.com/AliAlmasi/iranianshop/tree/guides#readme"
+				><a href="http://github.com/AliAlmasi/iranianshop/tree/guides#readme"
 					>فایل راهنما</a
 				></strong
 			>
@@ -215,32 +140,32 @@
 		</p>
 		<p>
 			خیلی از وب‌سایت ها، این پروژه رو بصورت <b>غیر رایگان</b> گذاشتن. من
-			علاقه‌ای به گرفتن پول در ازای کاری که همه میتونن بکنن ندارم، ولی اگه دونیت
-			کنین، خیلی خیلی ممنون‌تون میشم. 🤍
+			علاقه‌ای به گرفتن پول در ازای کاری که همه میتونن بکنن ندارم، ولی اگه
+			<a href="http://donate.al1almasi.ir">دونیت کنین</a>، خیلی خیلی ممنون‌تون
+			میشم. 🤍
 		</p>
+		<button onclick="window.location.href='http://donate.al1almasi.ir'">
+			صفحه دونیت (حمایت مالی) از سازنده
+		</button>
 		<div id="donation-pictures">
 			<img
 				src="./images/Screenshot_28-7-2024_85233_wpfile.ir.jpeg"
 				title="wpfile.ir"
-				onclick='location.replace("https://B2n.ir/f59425");'
 				loading="lazy"
 			/>
 			<img
 				src="./images/Screenshot_28-7-2024_85256_komakpajoo.ir.jpeg"
 				title="komakpajoo.ir"
-				onclick='location.replace("https://B2n.ir/h82906");'
 				loading="lazy"
 			/>
 			<img
 				src="./images/Screenshot_28-7-2024_85310_hoonarjo.ir.jpeg"
 				title="hoonarjo.ir"
-				onclick='location.replace("https://B2n.ir/u69517");'
 				loading="lazy"
 			/>
 			<img
 				src="./images/Screenshot_28-7-2024_85343_gama.ir.jpeg"
 				title="gama.ir"
-				onclick='location.replace("https://B2n.ir/x48111");'
 				loading="lazy"
 			/>
 		</div>
@@ -256,7 +181,7 @@
 		</blockquote>
 		<p>
 			<strong
-				><a href="https://github.com/AliAlmasi/iranianshop/tree/guides#readme"
+				><a href="http://github.com/AliAlmasi/iranianshop/tree/guides#readme"
 					>برای رفتن به بخش راهنماها و توضیحات اینجا کلیک کنید.</a
 				></strong
 			>
@@ -271,10 +196,10 @@
 		<h2>پروانه این پروژه</h2>
 		<p>
 			این پروژه تحت پروانه
-			<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fa"
+			<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fa"
 				>CC BY-NC-SA 4.0</a
 			>
-			هست. شما عزیزان میتونید <strong>با ذکر منبع</strong> میتونین به آزادی
+			هست. شما میتونید <strong>با ذکر منبع</strong>، به آزادی
 			<strong>برای استفاده های غیرتجاری</strong> از این پروژه، کد های این پروژه
 			و فایل های راهنمای این پروژه
 			<strong>تحت شرط استفاده مجدد از همین پروانه</strong> استفاده کنین.
