@@ -105,6 +105,7 @@
 	echo "</tr></tbody></table>";
 
 	?>
+	<p onclick="alert('برای مشاهده کد این صفحه، فایل calendar.php در پوشه ریشه پروژه (iranianshop) رو با یک ادیتور (مثل notepad) باز کنید.\n\nC:\\wamp64\\iranianshop\\calendar.php')">مشاهده کد این صفحه</p>
 </body>
 
 </html>

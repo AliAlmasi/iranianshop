@@ -23,6 +23,7 @@
   let thistime = new Date().getHours().toLocaleString(locale).toString() + ":" +
     new Date().getMinutes().toLocaleString(locale).toString();
   document.getElementById('DateTime').textContent = `امروز ${today} ساعت ${thistime}`;
+  document.getElementById('DateTime').addEventListener("click", () => window.location.href = "./calendar.php")
 </script>
 </script>
 </body>

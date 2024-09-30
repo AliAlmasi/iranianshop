@@ -53,6 +53,7 @@ nav {
 #DateTime {
 	text-align: center;
 	font-size: 16px;
+	cursor: pointer;
 }
 
 #footer {
