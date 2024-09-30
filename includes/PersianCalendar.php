@@ -1,14 +1,7 @@
 <?php
 
-/*
-Created by : Jalali
-modified by : Mohammad Dayyan
-1387/5/15
-*/
-
 function mds_date($format, $when = "now", $persianNumber = 0)
 {
-	///chosse your timezone
 	$TZhours = 3;
 	$TZminute = 30;
 	$need = "";
@@ -49,8 +42,8 @@ function mds_date($format, $when = "now", $persianNumber = 0)
 
 			case "A":
 				$result1 = date("a", $need);
-				if ($result1 == "pm") $result .= "&#1576;&#1593;&#1583;&#1575;&#1586;&#1592;&#1607;&#1585;";
-				else $result .= "&#1602;&#1576;&#1604;&#8207;&#1575;&#1586;&#1592;&#1607;&#1585;";
+				if ($result1 == "pm") $result .= "&#1576;&#1593;&#1583;&#160;&#1575;&#1586;&#160;&#1592;&#1607;&#1585;";
+				else $result .= "&#1602;&#1576;&#1604;&#160;&#8207;&#1575;&#1586;&#160;&#1592;&#1607;&#1585;";
 				break;
 
 			case "a":
@@ -169,11 +162,6 @@ function mds_date($format, $when = "now", $persianNumber = 0)
 			case "L":
 				list($tmp_year, $tmp_month, $tmp_day) = mds_to_gregorian(1384, 12, 1);
 				echo $tmp_day;
-				/*if(lastday($tmp_month,$tmp_day,$tmp_year)=="31")
-					$result.="1";
-				else
-					$result.="0";
-					*/
 				break;
 			default:
 				$result .= $subtype;
@@ -194,7 +182,6 @@ function make_time($hour = "", $minute = "", $second = "", $Dmonth = "", $Dday =
 	return $i;
 }
 
-///Find num of Day Begining Of Month ( 0 for Sat & 6 for Sun)
 function mstart($month, $day, $year)
 {
 	list($Dyear, $Dmonth, $Dday) = gregorian_to_mds($year, $month, $day);
@@ -203,7 +190,6 @@ function mstart($month, $day, $year)
 	return date("w", $timestamp);
 }
 
-//Find Number Of Days In This Month
 function lastday($month, $day, $year)
 {
 	$Dday2 = "";
@@ -230,7 +216,6 @@ function lastday($month, $day, $year)
 	return $lastdatep - 1;
 }
 
-//Find days in this year untile now
 function days_of_year($Dmonth, $Dday, $Dyear)
 {
 	$year = "";
@@ -246,7 +231,6 @@ function days_of_year($Dmonth, $Dday, $Dyear)
 	return $result + $Dday;
 }
 
-//translate number of month to name of month
 function monthname($month)
 {
 
@@ -303,8 +287,7 @@ function short_monthname($month)
 	if ($month == "12") return "&#1575;&#1587;&#1601; ";
 }
 
-//converts the numbers into the persian's number
-function Convertnumber2farsi($srting)
+function Convertnumber2farsi($string)
 {
 	$num0 = "&#1776;";
 	$num1 = "&#1777;";
@@ -318,22 +301,22 @@ function Convertnumber2farsi($srting)
 	$num9 = "&#1785;";
 
 	$stringtemp = "";
-	$len = strlen($srting);
+	$len = strlen($string);
 	for ($sub = 0; $sub < $len; $sub++) {
-		if (substr($srting, $sub, 1) == "0") $stringtemp .= $num0;
-		elseif (substr($srting, $sub, 1) == "1") $stringtemp .= $num1;
-		elseif (substr($srting, $sub, 1) == "2") $stringtemp .= $num2;
-		elseif (substr($srting, $sub, 1) == "3") $stringtemp .= $num3;
-		elseif (substr($srting, $sub, 1) == "4") $stringtemp .= $num4;
-		elseif (substr($srting, $sub, 1) == "5") $stringtemp .= $num5;
-		elseif (substr($srting, $sub, 1) == "6") $stringtemp .= $num6;
-		elseif (substr($srting, $sub, 1) == "7") $stringtemp .= $num7;
-		elseif (substr($srting, $sub, 1) == "8") $stringtemp .= $num8;
-		elseif (substr($srting, $sub, 1) == "9") $stringtemp .= $num9;
-		else $stringtemp .= substr($srting, $sub, 1);
+		if (substr($string, $sub, 1) == "0") $stringtemp .= $num0;
+		elseif (substr($string, $sub, 1) == "1") $stringtemp .= $num1;
+		elseif (substr($string, $sub, 1) == "2") $stringtemp .= $num2;
+		elseif (substr($string, $sub, 1) == "3") $stringtemp .= $num3;
+		elseif (substr($string, $sub, 1) == "4") $stringtemp .= $num4;
+		elseif (substr($string, $sub, 1) == "5") $stringtemp .= $num5;
+		elseif (substr($string, $sub, 1) == "6") $stringtemp .= $num6;
+		elseif (substr($string, $sub, 1) == "7") $stringtemp .= $num7;
+		elseif (substr($string, $sub, 1) == "8") $stringtemp .= $num8;
+		elseif (substr($string, $sub, 1) == "9") $stringtemp .= $num9;
+		else $stringtemp .= substr($string, $sub, 1);
 	}
 	return   $stringtemp;
-} ///end conver to number in persian
+}
 
 function is_kabise($year)
 {
@@ -391,11 +374,6 @@ function gregorian_to_mds($g_y, $g_m, $g_d)
 {
 	$g_days_in_month = array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 	$m_days_in_month = array(31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29);
-
-
-
-
-
 	$gy = $g_y - 1600;
 	$gm = $g_m - 1;
 	$gd = $g_d - 1;
@@ -405,7 +383,6 @@ function gregorian_to_mds($g_y, $g_m, $g_d)
 	for ($i = 0; $i < $gm; ++$i)
 		$g_day_no += $g_days_in_month[$i];
 	if ($gm > 1 && (($gy % 4 == 0 && $gy % 100 != 0) || ($gy % 400 == 0)))
-		/* leap and after Feb */
 		$g_day_no++;
 	$g_day_no += $gd;
 
@@ -435,9 +412,6 @@ function mds_to_gregorian($m_y, $j_m, $m_d)
 {
 	$g_days_in_month = array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 	$m_days_in_month = array(31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29);
-
-
-
 	$jy = $m_y - 979;
 	$jm = $j_m - 1;
 	$jd = $m_d - 1;

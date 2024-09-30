@@ -20,6 +20,7 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			user-select: none;
 		}
 
 		table {
@@ -63,6 +64,14 @@
 			color: black;
 			font-weight: normal;
 		}
+
+		a:link,
+		a:visited {
+			color: black;
+			text-decoration: none;
+			border-bottom: 1px solid black;
+			font-weight: bold;
+		}
 	</style>
 </head>
 
@@ -105,7 +114,7 @@
 	echo "</tr></tbody></table>";
 
 	?>
-	<p onclick="alert('برای مشاهده کد این صفحه، فایل calendar.php در پوشه ریشه پروژه (iranianshop) رو با یک ادیتور (مثل notepad) باز کنید.\n\nC:\\wamp64\\iranianshop\\calendar.php')">مشاهده کد این صفحه</p>
+	<p><a href="./persian_date.php">مشاهده تاریخ امروز با PHP</a></p>
 </body>
 
 </html>
