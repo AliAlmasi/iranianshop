@@ -13,6 +13,10 @@
 </div>
 </div>
 <script type="text/javascript">
+  function twoDigit(int = 0) {
+    if (int.toString().length < 2) return `۰${int}`
+    else return `${int}`;
+  }
   let options = {
     year: 'numeric',
     month: 'long',
@@ -20,10 +24,15 @@
   };
   let locale = "fa-IR";
   let today = new Date().toLocaleDateString(locale, options);
-  let thistime = new Date().getHours().toLocaleString(locale).toString() + ":" +
-    new Date().getMinutes().toLocaleString(locale).toString();
+  let thistime = twoDigit(new Date().getHours().toLocaleString(locale).toString()) + ":" +
+    twoDigit(new Date().getMinutes().toLocaleString(locale).toString());
   document.getElementById('DateTime').textContent = `امروز ${today} ساعت ${thistime}`;
-  document.getElementById('DateTime').addEventListener("click", () => window.location.href = "./calendar.php")
+  setInterval(() => {
+    let thistime = twoDigit(new Date().getHours().toLocaleString(locale).toString()) + ":" +
+      twoDigit(new Date().getMinutes().toLocaleString(locale).toString());
+    document.getElementById('DateTime').textContent = `امروز ${today} ساعت ${thistime}`;
+  }, 10 * 1000)
+  document.getElementById('DateTime').addEventListener("click", () => window.location.href = "./calendar.php");
 </script>
 </script>
 </body>
