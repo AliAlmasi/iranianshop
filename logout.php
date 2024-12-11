@@ -3,7 +3,6 @@ $title = "خروج از سایت";
 include("./includes/header.php");
 
 if (isset($_SESSION["state_login"]) && $_SESSION["state_login"] === true) {
-    session_start();
     session_unset();
     session_destroy();
 ?>
