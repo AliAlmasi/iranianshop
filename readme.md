@@ -2,6 +2,8 @@
 
 برای کسب اطلاعات بیشتر درمورد این پروژه، [**این صفحه وب را بخوانید**](https://al1almasi.ir/iranianshop/).
 
+برای مشاهده Preview آنلاین این پروژه [این لینک را کلیک کید](http://iranianshop.zya.me/)
+
 برای دسترسی به فایل های راهنما [از این لینک](https://github.com/AliAlmasi/iranianshop/tree/guides#readme) استفاده کنید.
 
 در این پروژه از [فونت وزیرمتن](https://rastikerdar.github.io/vazirmatn/) اثر زنده‌یاد صابر راستی‌کردار استفاده شده.
