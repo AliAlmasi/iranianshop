@@ -39,8 +39,10 @@ if (!isset($_SESSION["state_login"]) && $_SESSION["state_login"] !== true) {
 	</table>
 </form>
 <script type="text/javascript">
+	const isAdmin = "<?= $_SESSION['user_type'] ?>" === "admin" ? true : false
 	function delete_user() {
 		if (confirm("آیا از حذف نمایه کاربری خود مطمئن هستید؟"))
-			location.replace("action_delete_user.php");
+			if (isAdmin) alert("نمایه مدیر قابل حذف نیست.")
+			else location.replace("action_delete_user.php");
 	}
 </script>
